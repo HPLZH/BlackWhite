@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BW_Mobile.ChooseSize">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <StackLayout>
+                <Label x:Name="modeName" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title"/>
+                <Label x:Name="modeDescription" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                </StackLayout>
+                
+            </Frame>
+            <Label x:Name="tips" Text="若此页内容不能正常显示,请旋转屏幕" HorizontalTextAlignment="Center" IsVisible="false"/>
+            <ScrollView>
+                <StackLayout Padding="20">
+                    <Button Text="随机:?x?" Clicked="Button_Clicked"></Button>
+                    <Button Text="经典:3x3" Clicked="Button_Clicked"></Button>
+                    <Button Text="简单:4x4" Clicked="Button_Clicked"></Button>
+                    <Button Text="中等:5x5" Clicked="Button_Clicked"></Button>
+                    <Button Text="困难:6x6" Clicked="Button_Clicked"></Button>
+                    <Button Text="困难:7x7" Clicked="Button_Clicked"></Button>
+                    <Button Text="困难:8x8" Clicked="Button_Clicked"></Button>
+                    <Button Text="中等:9x9" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BW_Mobile.SettingsPage"
+             Title="设置">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label HorizontalOptions="Center" FontSize="{OnPlatform Android=48, UWP=Header}">黑白</Label>
+                <Label HorizontalOptions="Center" FontSize="Large" x:Name="version"></Label>
+                <Label HorizontalOptions="Center" FontSize="Large" x:Name="paltform"></Label>
+
+                <Label></Label>
+                <Label HorizontalOptions="Center">暂无设置项</Label>
+                <Label></Label>
+                
+                <Button Text="制作人员名单" x:Name="developers" Clicked="developers_Clicked"></Button>
+                <Label x:Name="releaseDate" FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="End"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

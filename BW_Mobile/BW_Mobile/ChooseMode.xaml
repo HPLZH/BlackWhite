@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BW_Mobile.ChooseMode"
+             Title="选择模式">
+    <ContentPage.Content>
+        <StackLayout x:Name="mainStack">
+        <ScrollView HorizontalOptions="FillAndExpand">
+             <StackLayout x:Name="select" Padding="20" RadioButtonGroup.GroupName="gamemode">
+                    <RadioButton GroupName="gamemode" CheckedChanged="RadioButton_CheckedChanged" Value="standard" Content="标准模式"></RadioButton>
+                    <RadioButton GroupName="gamemode" CheckedChanged="RadioButton_CheckedChanged" Value="perfect" Content="最优解"></RadioButton>
+                </StackLayout>
+        </ScrollView>
+        <Frame x:Name="info" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" WidthRequest="152">
+                <StackLayout>
+                <Label x:Name="modeName" Text="选择一个游戏模式" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title"/>
+
+                <Label x:Name="modeDescription" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"></Label>
+
+                <Button x:Name="next" Text="继续" IsEnabled="False" VerticalOptions="EndAndExpand" Clicked="next_Clicked"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

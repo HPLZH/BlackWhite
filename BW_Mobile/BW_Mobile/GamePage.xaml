@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BW_Mobile.GamePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="mainStack">
+            <ScrollView Orientation="Both">
+            <Frame x:Name="info" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" WidthRequest="102" HeightRequest="102">
+                <StackLayout x:Name="infoArea">
+                    
+                </StackLayout>
+            </Frame>
+            </ScrollView>
+            <Label x:Name="sizeWarn" FontSize="Large" IsVisible="false">你的屏幕/窗口暂时不支持现在的游戏尺寸</Label>
+            <AbsoluteLayout>
+                <Grid x:Name="gameArea" BackgroundColor="Black" IsVisible="false">
+                    <Grid.Padding>5</Grid.Padding>
+                    <Grid.RowSpacing>5</Grid.RowSpacing>
+                    <Grid.ColumnSpacing>5</Grid.ColumnSpacing>
+                    <Grid.Margin>20</Grid.Margin>
+                </Grid>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

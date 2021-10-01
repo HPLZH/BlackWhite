@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BW_Mobile.DebugPage"
+             Title="调试信息">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label FontSize="Subtitle">版本</Label>
+                <Label x:Name="version"></Label>
+                <Label></Label>
+                <Label FontSize="Subtitle">平台</Label>
+                <Label x:Name="paltform"></Label>
+                <Label></Label>
+                <Label FontSize="Subtitle">设备类型</Label>
+                <Label x:Name="idiom"></Label>
+                <Label></Label>
+                <Label FontSize="Subtitle">屏幕尺寸</Label>
+                <Label x:Name="size"></Label>
+                <Label></Label>
+                <Label FontSize="Subtitle" x:Name="landspaceMode" IsVisible="false">横屏模式</Label>
+                <Label x:Name="dependOnDevice" IsVisible="false">由你的设备决定</Label>
+                <Label x:Name="onAndOff" IsVisible="false">若要关闭,可以尝试打开再关闭</Label>
+                <Switch x:Name="landspace" IsVisible="false" Toggled="landspace_Toggled"></Switch>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
