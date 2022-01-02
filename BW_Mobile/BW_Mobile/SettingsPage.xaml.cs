@@ -24,5 +24,10 @@ namespace BW_Mobile
         {
             Navigation.PushAsync(new DevelopersPage());
         }
+
+        private void licence_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Licence());
+        }
     }
 }

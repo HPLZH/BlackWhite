@@ -15,6 +15,7 @@
                 <Label></Label>
                 
                 <Button Text="制作人员名单" x:Name="developers" Clicked="developers_Clicked"></Button>
+                <Button Text="开源许可证" x:Name="licence" Clicked="licence_Clicked"></Button>
                 <Label x:Name="releaseDate" FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="End"></Label>
             </StackLayout>
         </ScrollView>
