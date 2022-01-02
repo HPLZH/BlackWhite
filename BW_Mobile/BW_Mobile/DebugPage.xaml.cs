@@ -23,8 +23,11 @@ namespace BW_Mobile
                 landspaceMode.IsVisible = true;
                 if (Device.Idiom == TargetIdiom.Phone)
                 {
-                    landspace.IsVisible = true;
-                    onAndOff.IsVisible = true;
+                    //landspace.IsVisible = true;
+                    //onAndOff.IsVisible = true;
+                    //bLandspace.IsVisible = true;
+                    //bPortrait.IsVisible = true;
+                    butsLandspace.IsVisible = true;
                 }
                 else
                 {
@@ -49,6 +52,16 @@ namespace BW_Mobile
             {
                 DependencyService.Get<IOrientationService>().Portrait();
             }
+        }
+
+        private void bLandspace_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<IOrientationService>().Landscape();
+        }
+
+        private void bPortrait_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<IOrientationService>().Portrait();
         }
     }
 }

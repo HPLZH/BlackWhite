@@ -12,7 +12,7 @@
             <StackLayout x:Name="choose" Orientation="Vertical" Padding="20">
                 <Button x:Name="start" Text="开始" Clicked="start_Clicked"></Button>
                 <Button x:Name="data" Text="统计数据" IsEnabled="False"></Button>
-                <Button x:Name="help" Text="帮助" IsEnabled="False"></Button>
+                <Button x:Name="help" Text="帮助" IsEnabled="True" Clicked="help_Clicked"></Button>
                 <Button x:Name="settings" Text="设置" Clicked="settings_Clicked"></Button>
                 <Button x:Name="debug" Text="调试信息" IsVisible="false" Clicked="debug_Clicked"></Button>
             </StackLayout>

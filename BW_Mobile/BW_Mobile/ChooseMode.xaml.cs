@@ -19,6 +19,9 @@ namespace BW_Mobile
             {
                 next.TextColor=Color.White;
             }
+            //RadioButtonGroup.SetSelectedValue(select, "standard");
+            //bStandard.IsChecked = true;
+            //RadioButton_CheckedChanged(this, null);
         }
 
         protected int orientation = 2; // 0=>unexpected 1=>V -1=>H

@@ -5,7 +5,7 @@
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <Authors>LZH</Authors>
     <Company>HomePigGroup</Company>
-    <AssemblyVersion></AssemblyVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <NeutralLanguage>zh-CN</NeutralLanguage>
   </PropertyGroup>
 

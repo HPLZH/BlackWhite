@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="9fc78d62-1fc6-4a18-aecb-928270f7ca1c"
+    Name="BW.UWP"
     Publisher="CN=c0fcf088-b0aa-4b18-a44a-b98dfaab2251"
-    Version="1.0.0.0" />
+    Version="1.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>BW_Mobile.UWP</DisplayName>
-    <PublisherDisplayName>c0fcf088-b0aa-4b18-a44a-b98dfaab2251</PublisherDisplayName>
+    <PublisherDisplayName>李子晗</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

@@ -12,7 +12,12 @@ namespace BW_Mobile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GamePage : ContentPage
     {
+        public const string STANDARD = "standard";
+        
         private GameCore core;
+
+        private bool isRandom = false;
+        private Random random;
 
         private string gamemode;
         //private bool randSize = false;
@@ -60,8 +65,37 @@ namespace BW_Mobile
             LoadGameArea();
         }
 
+        public GamePage(Random randomSize, string gameMode)
+        {
+            InitializeComponent();
+            this.random = randomSize;
+            isRandom = true;
+
+            /*
+            core = new GameCore(this.random.Next(3,9));
+            core.ButtonClicked += Button_Click;
+            core.GameEnd += Game_End;
+            */
+
+            gamemode = gameMode;
+            useSeed = false;
+            StartGame();
+            
+            LoadInfoArea();
+            //LoadGameArea();
+            
+        }
+
         private void StartGame()
         {
+            if (isRandom)
+            {
+                core = new GameCore(this.random.Next(3, 10));
+                core.ButtonClicked += Button_Click;
+                core.GameEnd += Game_End;
+                gameAreaLoaded = false;
+            }
+
             switch (gamemode)
             {
                 default:
@@ -75,10 +109,20 @@ namespace BW_Mobile
                     }
                     break;
             }
+
+            if (isRandom)
+            {
+                //LoadInfoArea();
+                LoadGameArea();
+            }
         }
 
         private void LoadGameArea()
         {
+            gameArea.Children.Clear();
+            gameArea.ColumnDefinitions.Clear();
+            gameArea.RowDefinitions.Clear();
+            //gameArea = new Grid();
             for (int i = 0; i < core.GameSize; i++)
             {
                 gameArea.ColumnDefinitions.Add(new ColumnDefinition());
@@ -101,7 +145,7 @@ namespace BW_Mobile
         {
             switch (gamemode)
             {
-                case "standard":
+                case STANDARD:
                     //state
                     infoElements.Add("stateStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
                     infoElements.Add("state", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
@@ -152,7 +196,7 @@ namespace BW_Mobile
                     if (orientation != 0)
                     {
                         Title = "";
-                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? "你胜利了" : "正在进行";
+                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? "你胜利了" : "未完成";
                         ((Label)infoElements["standardCount"]).Text = $"{core.Count}";
                     }
                     else
@@ -270,7 +314,7 @@ namespace BW_Mobile
         
         private async void NewGame(object sender, EventArgs e)
         {
-            bool response = await DisplayAlert("开始新游戏", $"你确定要开始新游戏吗?{Environment.NewLine}游戏尺寸将不会改变", "是", "否");
+            bool response = await DisplayAlert("开始新游戏", "你确定要开始新游戏吗?", "是", "否");
             if (response)
             {
                 StartGame();

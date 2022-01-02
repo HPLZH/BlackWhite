@@ -76,5 +76,10 @@ namespace BW_Mobile
         {
             Navigation.PushAsync(new SettingsPage());
         }
+
+        private void help_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HelpPage());
+        }
     }
 }

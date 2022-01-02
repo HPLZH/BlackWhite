@@ -11,7 +11,7 @@ using Android.App;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BW_Mobile.Android")]
-[assembly: AssemblyCopyright("Copyright © 家猪周刊 2021")]
+[assembly: AssemblyCopyright("Copyright © 李子晗 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]

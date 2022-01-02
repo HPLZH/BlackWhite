@@ -76,7 +76,7 @@ namespace BW_Mobile
             string size = ((Button)sender).Text.Substring(5, 1);
             if (size == "?")
             {
-                Navigation.PushAsync(new GamePage(new Random().Next(3,10), gamemode));
+                Navigation.PushAsync(new GamePage(new Random(), gamemode));
             }
             else
             {
