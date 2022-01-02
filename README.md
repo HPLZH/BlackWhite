@@ -13,6 +13,7 @@
 1.  前往 https://gitee.com/HPLZH/BW/releases/
 2.  下载你需要的版本
 3.  安装
+
 UWP版本暂时只用于测试。
 
 #### 参与贡献
