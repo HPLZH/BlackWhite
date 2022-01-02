@@ -23,8 +23,8 @@
                 <Label x:Name="onAndOff" IsVisible="false">若要关闭,可以尝试打开再关闭</Label>
                 <Switch x:Name="tlandspace" IsVisible="false" Toggled="landspace_Toggled"></Switch>
                 <StackLayout x:Name="butsLandspace" Orientation="Horizontal">
-                    <Button x:Name="bLandspace" IsVisible="false" Text="横屏" Clicked="bLandspace_Clicked"></Button>
-                    <Button x:Name="bPortrait" IsVisible="false" Text="竖屏" Clicked="bPortrait_Clicked"></Button>
+                    <Button x:Name="bLandspace" Text="横屏" Clicked="bLandspace_Clicked"></Button>
+                    <Button x:Name="bPortrait" Text="竖屏" Clicked="bPortrait_Clicked"></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

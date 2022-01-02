@@ -18,7 +18,8 @@
                 <Label></Label>
                 <Label FontSize="Large" HorizontalOptions="Center">测试</Label>
                 <Label FontSize="Medium" HorizontalOptions="Center">李子晗</Label>
-                <Label FontSize="Small" HorizontalOptions="Center">(Windows10 PC,Android/HarmonyOS Phone)</Label>
+                <Label FontSize="Small" HorizontalOptions="Center">(Windows10 PC)(Android/HarmonyOS Phone)</Label>
+                <Label FontSize="Small" HorizontalOptions="Center">(Android/HarmonyOS Phone)</Label>
                 <Label FontSize="Medium" HorizontalOptions="Center">王梓欣</Label>
                 <Label FontSize="Small" HorizontalOptions="Center">(HarmonyOS Tablet)</Label>
         
