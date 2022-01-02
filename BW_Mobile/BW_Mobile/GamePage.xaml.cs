@@ -138,7 +138,7 @@ namespace BW_Mobile
                 }
             }
             gameAreaLoaded = true;
-            //TryChangeBlockSize();
+            TryChangeBlockSize();
         }
 
         private void LoadInfoArea()
