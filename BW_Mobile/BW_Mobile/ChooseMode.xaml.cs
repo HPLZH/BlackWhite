@@ -94,7 +94,7 @@ namespace BW_Mobile
                 case "perfect":
                     modeName.Text = "最优解";
                     modeDescription.Text = "使用不超过方块总数的步数取得胜利";
-                    next.IsEnabled = false;
+                    next.IsEnabled = true;
                     break;
             }
             if (orientation == 1)

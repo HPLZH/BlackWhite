@@ -22,6 +22,10 @@
                     <Button Text="困难:7x7" Clicked="Button_Clicked"></Button>
                     <Button Text="困难:8x8" Clicked="Button_Clicked"></Button>
                     <Button Text="中等:9x9" Clicked="Button_Clicked"></Button>
+
+                    <Button x:Name="test" Text="任意:_*_" Clicked="test_Clicked"  IsVisible="false"></Button>
+                    <Picker x:Name="testSelect" SelectedIndex="0"></Picker>
+                    <Label x:Name="testWarn" TextColor="Red">警告:选择过大的游戏尺寸会使游戏加载时间大幅上升,并且你的屏幕可能不支持这么大的游戏尺寸。</Label>
                 </StackLayout>
             </ScrollView>
         </StackLayout>

@@ -8,5 +8,6 @@ namespace BW_Mobile
     {
         void Landscape();
         void Portrait();
+        void User();
     }
 }

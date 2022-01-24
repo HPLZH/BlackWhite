@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BW_Mobile.MainPage">
+             x:Class="BW_Mobile.MainPage"
+             >
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
@@ -11,7 +12,7 @@
         <ScrollView>
             <StackLayout x:Name="choose" Orientation="Vertical" Padding="20">
                 <Button x:Name="start" Text="开始" Clicked="start_Clicked"></Button>
-                <Button x:Name="data" Text="统计数据" IsEnabled="False"></Button>
+                <Button x:Name="data" Text="统计数据" IsEnabled="False" IsVisible="false"></Button>
                 <Button x:Name="help" Text="帮助" IsEnabled="True" Clicked="help_Clicked"></Button>
                 <Button x:Name="settings" Text="设置" Clicked="settings_Clicked"></Button>
                 <Button x:Name="debug" Text="调试信息" IsVisible="false" Clicked="debug_Clicked"></Button>

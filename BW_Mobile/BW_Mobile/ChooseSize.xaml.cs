@@ -12,11 +12,14 @@ namespace BW_Mobile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChooseSize : ContentPage
     {
+        private Settings settings;
+
         private string gamemode;
 
         public ChooseSize(string mode)
         {
             InitializeComponent();
+            settings = new Settings();
             gamemode = mode;
             switch (mode)
             {
@@ -31,7 +34,14 @@ namespace BW_Mobile
                     
                     break;
             }
-            
+            for(int i = 10;i <= 30; i++)
+            {
+                testSelect.Items.Add(i.ToString());
+            }
+            test.IsVisible = settings.TestMode;
+            testSelect.IsVisible = settings.TestMode;
+            testWarn.IsVisible = settings.TestMode;
+            testSelect.SelectedIndex = 0;
         }
 
         protected int orientation; // 0=>unexpected 1=>V -1=>H
@@ -83,6 +93,11 @@ namespace BW_Mobile
                 Navigation.PushAsync(new GamePage(int.Parse(size), gamemode));
             }
             
+        }
+
+        private void test_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GamePage(int.Parse(testSelect.SelectedItem.ToString()), gamemode));
         }
     }
 }

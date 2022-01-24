@@ -29,5 +29,11 @@ namespace BW_Mobile.Droid
         {
             ((Activity)Forms.Context).RequestedOrientation = ScreenOrientation.Portrait;
         }
+
+        [Obsolete]
+        public void User()
+        {
+            ((Activity)Forms.Context).RequestedOrientation = ScreenOrientation.User;
+        }
     }
 }

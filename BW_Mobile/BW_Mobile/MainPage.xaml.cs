@@ -8,14 +8,14 @@ using Xamarin.Forms;
 
 namespace BW_Mobile
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage , IReLoad
     {
-        
+        Settings setting;
 
         public MainPage()
         {
             InitializeComponent();
-            
+            setting = new Settings();
             if (Device.Idiom == TargetIdiom.Phone && Device.RuntimePlatform == Device.Android)
             {
                 DependencyService.Get<IOrientationService>().Portrait();
@@ -23,8 +23,14 @@ namespace BW_Mobile
             if (App.DebugMode != "")
             {
                 Title = App.Version.ToString() + " " + App.DebugMode;
-                debug.IsVisible = true;
             }
+            ReLoad();
+        }
+
+        public void ReLoad()
+        {
+            setting.Refresh();
+            debug.IsVisible = setting.TestMode;
         }
 
         protected int orientation; // 0=>unexpected 1=>V -1=>H
@@ -74,7 +80,7 @@ namespace BW_Mobile
 
         private void settings_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new SettingsPage());
+            Navigation.PushAsync(new SettingsPage(this));
         }
 
         private void help_Clicked(object sender, EventArgs e)

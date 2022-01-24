@@ -22,7 +22,8 @@
                 <Label FontSize="Small" HorizontalOptions="Center">(Android/HarmonyOS Phone)</Label>
                 <Label FontSize="Medium" HorizontalOptions="Center">王梓欣</Label>
                 <Label FontSize="Small" HorizontalOptions="Center">(HarmonyOS Tablet)</Label>
-                
+                <Label></Label>
+                <Label FontSize="Small" HorizontalOptions="Center">本软件已在Gitee开源</Label>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

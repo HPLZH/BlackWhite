@@ -22,9 +22,10 @@
                 <Label x:Name="dependOnDevice" IsVisible="false">由你的设备决定</Label>
                 <Label x:Name="onAndOff" IsVisible="false">若要关闭,可以尝试打开再关闭</Label>
                 <Switch x:Name="tlandspace" IsVisible="false" Toggled="landspace_Toggled"></Switch>
-                <StackLayout x:Name="butsLandspace" Orientation="Horizontal">
+                <StackLayout x:Name="butsLandspace" Orientation="Horizontal" IsVisible="false">
                     <Button x:Name="bLandspace" Text="横屏" Clicked="bLandspace_Clicked"></Button>
                     <Button x:Name="bPortrait" Text="竖屏" Clicked="bPortrait_Clicked"></Button>
+                    <Button x:Name="bUser" Text="自动" Clicked="bUser_Clicked"></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

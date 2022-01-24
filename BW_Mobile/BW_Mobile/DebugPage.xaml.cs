@@ -63,5 +63,10 @@ namespace BW_Mobile
         {
             DependencyService.Get<IOrientationService>().Portrait();
         }
+
+        private void bUser_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<IOrientationService>().User();
+        }
     }
 }

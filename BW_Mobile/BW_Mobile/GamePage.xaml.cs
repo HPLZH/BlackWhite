@@ -13,6 +13,7 @@ namespace BW_Mobile
     public partial class GamePage : ContentPage
     {
         public const string STANDARD = "standard";
+        public const string PERFECT = "perfect";
         
         private GameCore core;
 
@@ -162,7 +163,23 @@ namespace BW_Mobile
                     ((StackLayout)infoElements["countStack"]).Children.Add(infoElements["countLabel"]);
                     ((StackLayout)infoElements["countStack"]).Children.Add(infoElements["standardCount"]);
                     break;
-                case "perfect":
+                case PERFECT:
+                    //state
+                    infoElements.Add("stateStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
+                    infoElements.Add("state", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
+                    infoElements.Add("newGame", new Button { TextColor = ((Device.RuntimePlatform == Device.UWP) ? Color.White : Color.Default), Text = "开始新游戏" });
+                    ((Button)infoElements["newGame"]).Clicked += NewGame;
+                    infoArea.Children.Add(infoElements["stateStack"]);
+                    ((StackLayout)infoElements["stateStack"]).Children.Add(infoElements["state"]);
+                    ((StackLayout)infoElements["stateStack"]).Children.Add(infoElements["newGame"]);
+                    //count
+                    infoElements.Add("countStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
+                    infoElements.Add("countLabel", new Label { TextColor = Color.White, FontSize = 20, Text = "剩余步数", HorizontalTextAlignment = TextAlignment.Center });
+                    infoElements.Add("perfectCount", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
+                    infoArea.Children.Add(infoElements["countStack"]);
+                    ((StackLayout)infoElements["countStack"]).Children.Add(infoElements["countLabel"]);
+                    ((StackLayout)infoElements["countStack"]).Children.Add(infoElements["perfectCount"]);
+                    break;
                 default:
                     throw new ArgumentException("This gamemode is not supported.", "gameMode");
                     //break;
@@ -205,6 +222,17 @@ namespace BW_Mobile
                     }
                     break;
                 case "perfect":
+                    if (orientation != 0)
+                    {
+                        Title = "";
+                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? "你胜利了" : ((core.Result == GameResult.Lose) ? "你失败了" : "未完成");
+                        ((Label)infoElements["perfectCount"]).Text = $"{core.GameSize * core.GameSize - core.Count}";
+                    }
+                    else
+                    {
+                        Title = $"{((core.Result == GameResult.Win) ? "胜利! " : ((core.Result == GameResult.Lose) ? "失败! " : ""))}剩余步数: {core.GameSize * core.GameSize - core.Count}";
+                    }
+                    break;
                 default:
                     break;
             }
@@ -276,13 +304,13 @@ namespace BW_Mobile
                 blockSize = (currentWidth > currentHeight) ? GetBlockSize(currentHeight) : GetBlockSize(currentWidth);
                 if (blockSize < 30)
                 {
-                    gameArea.IsVisible = false;
+                    gameLayout.IsVisible = false;
                     sizeWarn.IsVisible = true;
                 }
                 else
                 {
                     ChangeBlockSize(blockSize);
-                    gameArea.IsVisible = true;
+                    gameLayout.IsVisible = true;
                     sizeWarn.IsVisible = false;
                 }
             }
@@ -295,6 +323,18 @@ namespace BW_Mobile
 
         private void Button_Click(object sender, EventArgs e)
         {
+            switch (gamemode){
+                case STANDARD:
+                    break;
+                case PERFECT:
+                    if(core.Result == GameResult.NoResult && core.GameSize * core.GameSize - core.Count <= 0)
+                    {
+                        core.Lose();
+                    }
+                    break;
+                default:
+                    break;
+            }
             RefreshInfoArea();
         }
 
@@ -303,12 +343,16 @@ namespace BW_Mobile
             RefreshInfoArea();
             if (core.Result == GameResult.Win)
             {
-                bool response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步","再来一局","确定");
+                bool response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步{Environment.NewLine}还剩{core.GameSize * core.GameSize - core.Count}步", "再来一局", "确定");
                 if (response)
                 {
                     StartGame();
                     RefreshInfoArea();
                 }
+            }
+            else if(core.Result == GameResult.Lose)
+            {
+                await DisplayAlert("游戏结束", $"你失败了{Environment.NewLine}你还可以尝试继续完成游戏", "确定");
             }
         }
         

@@ -8,7 +8,7 @@
         <ScrollView HorizontalOptions="FillAndExpand">
                 <StackLayout x:Name="select" Padding="20" RadioButtonGroup.GroupName="gamemode">
                     <RadioButton GroupName="gamemode" CheckedChanged="RadioButton_CheckedChanged" Value="standard" Content="标准模式"></RadioButton>
-                    <RadioButton GroupName="gamemode" CheckedChanged="RadioButton_CheckedChanged" Value="perfect" Content="最优解" IsEnabled="False"></RadioButton>
+                    <RadioButton GroupName="gamemode" CheckedChanged="RadioButton_CheckedChanged" Value="perfect" Content="最优解"></RadioButton>
                 </StackLayout>
         </ScrollView>
         <Frame x:Name="info" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" WidthRequest="152">
