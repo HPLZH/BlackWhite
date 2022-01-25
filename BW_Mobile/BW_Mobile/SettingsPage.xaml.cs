@@ -24,6 +24,7 @@ namespace BW_Mobile
             paltform.Text = Device.RuntimePlatform;
             releaseDate.Text = App.ReleaseDate;
             swTestMode.IsToggled = settings.TestMode;
+            emptyLab.IsVisible = true;
             saveInfo.IsVisible = false;
         }
 

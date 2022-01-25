@@ -6,9 +6,9 @@ namespace BW_Mobile
 {
     public partial class App : Application
     {
-        public static Version Version => new Version(2, 3, 11);
+        public static Version Version => new Version(2, 3, 12);
         public static string DebugMode => "";
-        public static string ReleaseDate => "2022年1月24日";
+        public static string ReleaseDate => "2022年1月25日";
 
         public App()
         {
