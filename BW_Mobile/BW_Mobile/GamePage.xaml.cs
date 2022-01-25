@@ -341,9 +341,21 @@ namespace BW_Mobile
         private async void Game_End(object sender, EventArgs e)
         {
             RefreshInfoArea();
+            bool response = false;
             if (core.Result == GameResult.Win)
             {
-                bool response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步{Environment.NewLine}还剩{core.GameSize * core.GameSize - core.Count}步", "再来一局", "确定");
+                switch (gamemode)
+                {
+                    case STANDARD:
+                        response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步", "再来一局", "确定");
+                        break;
+                    case PERFECT:
+                        response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步{Environment.NewLine}还剩{core.GameSize * core.GameSize - core.Count}步", "再来一局", "确定");
+                        break;
+                    default:
+                        break;
+                }
+                
                 if (response)
                 {
                     StartGame();

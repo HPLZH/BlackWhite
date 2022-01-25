@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="12" android:versionName="2.3.12" package="lzh.homepig.bw.android" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="13" android:versionName="2.3.13" package="lzh.homepig.bw.android" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="30" />
 	<application android:theme="@style/MainTheme" android:label="黑白"></application>
 </manifest>
