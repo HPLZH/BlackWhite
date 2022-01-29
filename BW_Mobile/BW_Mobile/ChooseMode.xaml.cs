@@ -87,13 +87,13 @@ namespace BW_Mobile
             switch(RadioButtonGroup.GetSelectedValue(select))
             {
                 case "standard":
-                    modeName.Text = "标准模式";
-                    modeDescription.Text = "使用尽可能少的步数取得胜利";
+                    modeName.Text = Properties.Resources.Mode_Standard;
+                    modeDescription.Text = Properties.Resources.Mode_Standard_Info;
                     next.IsEnabled = true;
                     break;
                 case "perfect":
-                    modeName.Text = "最优解";
-                    modeDescription.Text = "使用不超过方块总数的步数取得胜利";
+                    modeName.Text = Properties.Resources.Mode_Perfect;
+                    modeDescription.Text = Properties.Resources.Mode_Perfect_Info;
                     next.IsEnabled = true;
                     break;
             }

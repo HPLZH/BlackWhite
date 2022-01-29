@@ -1,16 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:BW_Mobile.Properties"
              x:Class="BW_Mobile.HelpPage"
-             Title="帮助">
+             Title="{x:Static resources:Resources.HelpPage_Title}">
     <ScrollView>
         <StackLayout Padding="20">
+            <Label TextColor="Black">此页面还未被翻译</Label>
+            <Label TextColor="Black">This page has not been translated.</Label>
+            <Label></Label>
             <Label FontSize="Subtitle" TextColor="Black">操作方法</Label>
             <Label TextColor="Black">点击一个格子,它和与它相邻的上下左右(如果有)四个格子变色(黑变白,白变黑)</Label>
             <Button Text="自己试一试" Clicked="Button_Clicked" />
             <Label> </Label>
             <Label FontSize="Subtitle" TextColor="Black">获胜条件</Label>
-            <Label TextColor="Black">所有格子全部变成同一种颜色即可获胜,此时屏幕顶部显示"完成!"</Label>
+            <Label TextColor="Black">所有格子全部变成同一种颜色即可获胜</Label>
         </StackLayout>
     </ScrollView>
 </ContentPage>

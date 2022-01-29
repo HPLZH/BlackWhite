@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:BW_Mobile.Properties"
              x:Class="BW_Mobile.GamePage">
     <ContentPage.Content>
         <StackLayout x:Name="mainStack">
@@ -11,7 +12,7 @@
                 </StackLayout>
             </Frame>
             </ScrollView>
-            <Label x:Name="sizeWarn" FontSize="Large" IsVisible="false">你的屏幕/窗口太小了</Label>
+            <Label x:Name="sizeWarn" FontSize="Large" IsVisible="false" Text="{x:Static resources:Resources.GamePage_Small}"></Label>
             <AbsoluteLayout x:Name="gameLayout">
                 <Grid x:Name="gameArea" BackgroundColor="Black">
                     <Grid.Padding>5</Grid.Padding>

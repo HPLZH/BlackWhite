@@ -24,13 +24,13 @@ namespace BW_Mobile
             switch (mode)
             {
                 case "standard":
-                    modeName.Text = "标准模式";
-                    modeDescription.Text = "使用尽可能少的步数取得胜利";
+                    modeName.Text = Properties.Resources.Mode_Standard;
+                    modeDescription.Text = Properties.Resources.Mode_Standard_Info;
                     
                     break;
                 case "perfect":
-                    modeName.Text = "最优解";
-                    modeDescription.Text = "使用不超过方块总数的步数取得胜利";
+                    modeName.Text = Properties.Resources.Mode_Perfect;
+                    modeDescription.Text = Properties.Resources.Mode_Perfect_Info;
                     
                     break;
             }
@@ -83,21 +83,20 @@ namespace BW_Mobile
         private void Button_Clicked(object sender, EventArgs e)
         {
             //以后要改
-            string size = ((Button)sender).Text.Substring(5, 1);
+            string size = ((Button)sender).AutomationId;
             if (size == "?")
             {
                 Navigation.PushAsync(new GamePage(new Random(), gamemode));
+            }
+            else if(size == "_")
+            {
+                Navigation.PushAsync(new GamePage(int.Parse(testSelect.SelectedItem.ToString()), gamemode));
             }
             else
             {
                 Navigation.PushAsync(new GamePage(int.Parse(size), gamemode));
             }
             
-        }
-
-        private void test_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new GamePage(int.Parse(testSelect.SelectedItem.ToString()), gamemode));
         }
     }
 }

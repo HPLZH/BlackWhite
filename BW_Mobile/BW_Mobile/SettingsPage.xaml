@@ -1,26 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:BW_Mobile.Properties"
              x:Class="BW_Mobile.SettingsPage"
-             Title="设置"
+             Title="{x:Static resources:Resources.SettingsPage_Title}"
              Disappearing="ContentPage_Disappearing">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20">
-                <Label HorizontalOptions="Center" FontSize="{OnPlatform Android=48, UWP=Header}">黑白</Label>
+                <Label HorizontalOptions="Center" FontSize="{OnPlatform Android=48, UWP=Header}" Text="{x:Static resources:Resources.GameName}"></Label>
                 <Label HorizontalOptions="Center" FontSize="Large" x:Name="version"></Label>
                 <Label HorizontalOptions="Center" FontSize="Large" x:Name="paltform"></Label>
-
                 <Label></Label>
                 <StackLayout Orientation="Horizontal">
-                    <Label FontSize="Medium">测试模式</Label>
+                    <Label FontSize="Medium" Text="{x:Static resources:Resources.SettingsPage_TestMode}"></Label>
                     <Switch x:Name="swTestMode" Toggled="swTestMode_Toggled"></Switch>
                 </StackLayout>
+                <StackLayout Orientation="Horizontal" IsVisible="{OnPlatform Default=false, Android=true}">
+                    <Label FontSize="Medium" Text="{x:Static resources:Resources.SettingsPage_PortraitOnly}"></Label>
+                    <Switch x:Name="swPortraitOnly" Toggled="swPortraitOnly_Toggled"></Switch>
+                </StackLayout>
                 <Label x:Name="emptyLab" IsVisible="true"></Label>
-                <Label x:Name="saveInfo" TextColor="Red" IsVisible="false" HorizontalOptions="Center">有未保存的更改</Label>
-                <Button Text="保存更改" x:Name="save" Clicked="save_Clicked"></Button>
-                <Button Text="制作人员名单" x:Name="developers" Clicked="developers_Clicked"></Button>
-                <Button Text="开放源代码许可" x:Name="licence" Clicked="licence_Clicked"></Button>
+                <Label x:Name="saveInfo" TextColor="Red" IsVisible="false" HorizontalOptions="Center" Text="{x:Static resources:Resources.SettingsPage_UnsavedChanges}"></Label>
+                <Button Text="{x:Static resources:Resources.SettingsPage_SaveChanges}" x:Name="save" Clicked="save_Clicked"></Button>
+                <Button Text="{x:Static resources:Resources.Credits_Title}" x:Name="credits" Clicked="credits_Clicked"></Button>
+                <Button Text="{x:Static resources:Resources.SettingsPage_Licence}" x:Name="licence" Clicked="licence_Clicked"></Button>
                 <Label x:Name="releaseDate" FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="End"></Label>
             </StackLayout>
         </ScrollView>

@@ -15,58 +15,27 @@ namespace BW_Mobile
         public DebugPage()
         {
             InitializeComponent();
-            version.Text = App.Version.ToString() + " " + App.DebugMode; // + Environment.NewLine + "Build " + Environment.Version.Build;
+            version.Text = App.Version.ToString() + (App.Preview ? " Preview" : ""); // + Environment.NewLine + "Build " + Environment.Version.Build;
             paltform.Text = Device.RuntimePlatform;
             idiom.Text = Device.Idiom.ToString();
-            if(Device.RuntimePlatform == Device.Android)
+            //Properties.Resources.Culture = System.Globalization.CultureInfo.CurrentCulture;
+            if(Properties.Resources.Culture != null)
             {
-                landspaceMode.IsVisible = true;
-                if (Device.Idiom == TargetIdiom.Phone)
-                {
-                    //landspace.IsVisible = true;
-                    //onAndOff.IsVisible = true;
-                    //bLandspace.IsVisible = true;
-                    //bPortrait.IsVisible = true;
-                    butsLandspace.IsVisible = true;
-                }
-                else
-                {
-                    dependOnDevice.IsVisible = true;
-                }
+                langResources.Text = $"Resources:[{Properties.Resources.Culture.Name}]{Properties.Resources.Culture.DisplayName}";
             }
+            else
+            {
+                langResources.Text = "Resources:[null]";
+            }
+            langCurrent.Text = $"Current:[{System.Globalization.CultureInfo.CurrentCulture.Name}]{System.Globalization.CultureInfo.CurrentCulture.DisplayName}";
+            langCurrentUI.Text = $"CurrentUI:[{System.Globalization.CultureInfo.CurrentCulture.Name}]{System.Globalization.CultureInfo.CurrentCulture.DisplayName}";
+            
         }
 
         protected override void OnSizeAllocated(double width, double height)
         {
             size.Text = "MainPage: " + Math.Round(Application.Current.MainPage.Width).ToString() + "*" + Math.Round(Application.Current.MainPage.Height).ToString() + Environment.NewLine + "Current:  " + Math.Round(width).ToString() + "*" + Math.Round(height).ToString();
             base.OnSizeAllocated(width, height); //must be called
-        }
-
-        private void landspace_Toggled(object sender, ToggledEventArgs e)
-        {
-            if (e.Value)
-            {
-                DependencyService.Get<IOrientationService>().Landscape();
-            }
-            else
-            {
-                DependencyService.Get<IOrientationService>().Portrait();
-            }
-        }
-
-        private void bLandspace_Clicked(object sender, EventArgs e)
-        {
-            DependencyService.Get<IOrientationService>().Landscape();
-        }
-
-        private void bPortrait_Clicked(object sender, EventArgs e)
-        {
-            DependencyService.Get<IOrientationService>().Portrait();
-        }
-
-        private void bUser_Clicked(object sender, EventArgs e)
-        {
-            DependencyService.Get<IOrientationService>().User();
         }
     }
 }

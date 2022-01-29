@@ -11,20 +11,28 @@ namespace BW_Mobile
     public partial class MainPage : ContentPage , IReLoad
     {
         Settings setting;
+        IReLoad parentApp;
+        bool askLang;
 
-        public MainPage()
+        public MainPage(IReLoad parent, bool askLanguage)
         {
+            //Properties.Resources.Culture = new System.Globalization.CultureInfo("en-US");
             InitializeComponent();
+            parentApp = parent;
+            //start.Text = Properties.Resources.MainPage_Start;
+           
             setting = new Settings();
             if (Device.Idiom == TargetIdiom.Phone && Device.RuntimePlatform == Device.Android)
             {
                 DependencyService.Get<IOrientationService>().Portrait();
             }
-            if (App.DebugMode != "")
+            if (App.Preview)
             {
-                Title = App.Version.ToString() + " " + App.DebugMode;
+                Title = App.Version.ToString() + " Preview";
             }
             ReLoad();
+            askLang = askLanguage;
+            
         }
 
         public void ReLoad()
@@ -86,6 +94,39 @@ namespace BW_Mobile
         private void help_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new HelpPage());
+        }
+
+        private async void lang_Clicked(object sender, EventArgs e)
+        {
+            string langResult = await DisplayActionSheet(Properties.Resources.MainPage_Language,askLang ? null : Properties.Resources.MsgBox_Cancel, Properties.Resources.MainPage_Language_System, "简体中文", "English");
+            string langFinalResult = "%system%";
+            if (langResult == Properties.Resources.MsgBox_Cancel)
+            {
+                return;
+            }
+            askLang = false;
+            switch (langResult)
+            {
+                case "简体中文":
+                    langFinalResult = "zh-CN";
+                    break;
+                case "English":
+                    langFinalResult = "en";
+                    break;
+                default:
+                    break;
+            }
+            setting.Language = langFinalResult;
+            setting.SaveAll();
+            parentApp.ReLoad();
+        }
+
+        private void ContentPage_Appearing(object sender, EventArgs e)
+        {
+            if (askLang)
+            {
+                lang_Clicked(this, null);
+            }
         }
     }
 }

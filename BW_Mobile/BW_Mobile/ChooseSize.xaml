@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:BW_Mobile.Properties"
              x:Class="BW_Mobile.ChooseSize">
     <ContentPage.Content>
         <StackLayout>
@@ -11,21 +12,21 @@
                 </StackLayout>
                 
             </Frame>
-            <Label x:Name="tips" Text="若此页内容不能正常显示,请旋转屏幕" HorizontalTextAlignment="Center" IsVisible="false"/>
+            <Label x:Name="tips" Text="{x:Static resources:Resources.MainPage_Tips}" HorizontalTextAlignment="Center" IsVisible="false"/>
             <ScrollView>
                 <StackLayout Padding="20">
-                    <Button Text="随机:?x?" Clicked="Button_Clicked"></Button>
-                    <Button Text="经典:3x3" Clicked="Button_Clicked"></Button>
-                    <Button Text="简单:4x4" Clicked="Button_Clicked"></Button>
-                    <Button Text="中等:5x5" Clicked="Button_Clicked"></Button>
-                    <Button Text="困难:6x6" Clicked="Button_Clicked"></Button>
-                    <Button Text="困难:7x7" Clicked="Button_Clicked"></Button>
-                    <Button Text="困难:8x8" Clicked="Button_Clicked"></Button>
-                    <Button Text="中等:9x9" Clicked="Button_Clicked"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_Random}" Clicked="Button_Clicked" AutomationId="?"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_3}" Clicked="Button_Clicked" AutomationId="3"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_4}" Clicked="Button_Clicked" AutomationId="4"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_5}" Clicked="Button_Clicked" AutomationId="5"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_6}" Clicked="Button_Clicked" AutomationId="6"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_7}" Clicked="Button_Clicked" AutomationId="7"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_8}" Clicked="Button_Clicked" AutomationId="8"></Button>
+                    <Button Text="{x:Static resources:Resources.Size_9}" Clicked="Button_Clicked" AutomationId="9"></Button>
 
-                    <Button x:Name="test" Text="任意:_*_" Clicked="test_Clicked"  IsVisible="false"></Button>
-                    <Picker x:Name="testSelect" SelectedIndex="0"></Picker>
-                    <Label x:Name="testWarn" TextColor="Red">警告:选择过大的游戏尺寸会使游戏加载时间大幅上升,并且你的屏幕可能不支持这么大的游戏尺寸。</Label>
+                    <Button x:Name="test" Text="{x:Static resources:Resources.Size_Given}" Clicked="Button_Clicked" AutomationId="_" IsVisible="false"></Button>
+                    <Picker x:Name="testSelect" SelectedIndex="0" Title="{x:Static resources:Resources.SizePage_Test_Choose}"></Picker>
+                    <Label x:Name="testWarn" TextColor="Red" Text="{x:Static resources:Resources.SizePage_Test_Warn}"></Label>
                 </StackLayout>
             </ScrollView>
         </StackLayout>

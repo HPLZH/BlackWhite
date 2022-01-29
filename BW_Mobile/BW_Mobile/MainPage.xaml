@@ -1,21 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:BW_Mobile.Properties"
              x:Class="BW_Mobile.MainPage"
+             Appearing="ContentPage_Appearing"
              >
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="黑白" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="{x:Static resources:Resources.GameName}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label x:Name="tips" Text="若此页内容不能正常显示,请旋转屏幕" HorizontalTextAlignment="Center" IsVisible="false"/>
+        <Label x:Name="tips" Text="{x:Static resources:Resources.MainPage_Tips}" HorizontalTextAlignment="Center" IsVisible="false"/>
         <ScrollView>
             <StackLayout x:Name="choose" Orientation="Vertical" Padding="20">
-                <Button x:Name="start" Text="开始" Clicked="start_Clicked"></Button>
-                <Button x:Name="data" Text="统计数据" IsEnabled="False" IsVisible="false"></Button>
-                <Button x:Name="help" Text="帮助" IsEnabled="True" Clicked="help_Clicked"></Button>
-                <Button x:Name="settings" Text="设置" Clicked="settings_Clicked"></Button>
-                <Button x:Name="debug" Text="调试信息" IsVisible="false" Clicked="debug_Clicked"></Button>
+                <Button x:Name="start" Text="{x:Static resources:Resources.MainPage_Start}" Clicked="start_Clicked"></Button>
+                <Button x:Name="statistics" Text="{x:Static resources:Resources.MainPage_Statistics}" IsEnabled="False" IsVisible="false"></Button>
+                <Button x:Name="help" Text="{x:Static resources:Resources.MainPage_Help}" IsEnabled="True" Clicked="help_Clicked"></Button>
+                <Button x:Name="settings" Text="{x:Static resources:Resources.MainPage_Settings}" Clicked="settings_Clicked"></Button>
+                <Button x:Name="debug" Text="{x:Static resources:Resources.MainPage_Debug}" IsVisible="false" Clicked="debug_Clicked"></Button>
+                <Button x:Name="lang" Text="{x:Static resources:Resources.MainPage_Language}" Clicked="lang_Clicked"></Button>
             </StackLayout>
         </ScrollView>
         

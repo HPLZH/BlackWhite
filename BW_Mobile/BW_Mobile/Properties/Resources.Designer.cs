@@ -59,5 +59,554 @@ namespace BW_Mobile.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找类似 测试 的本地化字符串。
+        /// </summary>
+        public static string Credits_Debugging {
+            get {
+                return ResourceManager.GetString("Credits_Debugging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏设计 的本地化字符串。
+        /// </summary>
+        public static string Credits_GameDesign {
+            get {
+                return ResourceManager.GetString("Credits_GameDesign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 程序 的本地化字符串。
+        /// </summary>
+        public static string Credits_Programming {
+            get {
+                return ResourceManager.GetString("Credits_Programming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 制作人员名单 的本地化字符串。
+        /// </summary>
+        public static string Credits_Title {
+            get {
+                return ResourceManager.GetString("Credits_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 翻译 的本地化字符串。
+        /// </summary>
+        public static string Credits_Translating {
+            get {
+                return ResourceManager.GetString("Credits_Translating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 黑白 的本地化字符串。
+        /// </summary>
+        public static string GameName {
+            get {
+                return ResourceManager.GetString("GameName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 剩余步数 的本地化字符串。
+        /// </summary>
+        public static string GamePage_LeftClicks {
+            get {
+                return ResourceManager.GetString("GamePage_LeftClicks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你确定要开始新游戏吗? 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Msg_NewGame {
+            get {
+                return ResourceManager.GetString("GamePage_Msg_NewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你失败了%1%你还可以尝试继续完成游戏 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Msg_Perfect_Lose {
+            get {
+                return ResourceManager.GetString("GamePage_Msg_Perfect_Lose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你胜利了!%1%总共用了%2%步%1%还剩%3%步 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Msg_Perfect_Win {
+            get {
+                return ResourceManager.GetString("GamePage_Msg_Perfect_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你胜利了!%1%总共用了%2%步 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Msg_Standard_Win {
+            get {
+                return ResourceManager.GetString("GamePage_Msg_Standard_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏结束 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Msg_Title_GameEnd_Lose {
+            get {
+                return ResourceManager.GetString("GamePage_Msg_Title_GameEnd_Lose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏结束 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Msg_Title_GameEnd_Win {
+            get {
+                return ResourceManager.GetString("GamePage_Msg_Title_GameEnd_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 再来一局 的本地化字符串。
+        /// </summary>
+        public static string GamePage_MsgBox_NextNewGame {
+            get {
+                return ResourceManager.GetString("GamePage_MsgBox_NextNewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开始新游戏 的本地化字符串。
+        /// </summary>
+        public static string GamePage_NewGame {
+            get {
+                return ResourceManager.GetString("GamePage_NewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你的屏幕/窗口太小了 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Small {
+            get {
+                return ResourceManager.GetString("GamePage_Small", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你失败了 的本地化字符串。
+        /// </summary>
+        public static string GamePage_State_Lose {
+            get {
+                return ResourceManager.GetString("GamePage_State_Lose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 未完成 的本地化字符串。
+        /// </summary>
+        public static string GamePage_State_NoResult {
+            get {
+                return ResourceManager.GetString("GamePage_State_NoResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 你胜利了 的本地化字符串。
+        /// </summary>
+        public static string GamePage_State_Win {
+            get {
+                return ResourceManager.GetString("GamePage_State_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 剩余步数: %1% 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Title_Perfect_NoResult {
+            get {
+                return ResourceManager.GetString("GamePage_Title_Perfect_NoResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 胜利! 剩余步数: %1% 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Title_Perfect_Win {
+            get {
+                return ResourceManager.GetString("GamePage_Title_Perfect_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 已用步数: %1% 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Title_Standard_NoResult {
+            get {
+                return ResourceManager.GetString("GamePage_Title_Standard_NoResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 胜利! 已用步数: %1% 的本地化字符串。
+        /// </summary>
+        public static string GamePage_Title_Standard_Win {
+            get {
+                return ResourceManager.GetString("GamePage_Title_Standard_Win", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 已用步数 的本地化字符串。
+        /// </summary>
+        public static string GamePage_UsedClicks {
+            get {
+                return ResourceManager.GetString("GamePage_UsedClicks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 帮助 的本地化字符串。
+        /// </summary>
+        public static string HelpPage_Title {
+            get {
+                return ResourceManager.GetString("HelpPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 调试信息 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Debug {
+            get {
+                return ResourceManager.GetString("MainPage_Debug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 帮助 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Help {
+            get {
+                return ResourceManager.GetString("MainPage_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 语言 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Language {
+            get {
+                return ResourceManager.GetString("MainPage_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 跟随系统 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Language_System {
+            get {
+                return ResourceManager.GetString("MainPage_Language_System", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 设置 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Settings {
+            get {
+                return ResourceManager.GetString("MainPage_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开始 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Start {
+            get {
+                return ResourceManager.GetString("MainPage_Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 统计数据 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Statistics {
+            get {
+                return ResourceManager.GetString("MainPage_Statistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 若此页内容不能正常显示,请旋转屏幕 的本地化字符串。
+        /// </summary>
+        public static string MainPage_Tips {
+            get {
+                return ResourceManager.GetString("MainPage_Tips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 最优解 的本地化字符串。
+        /// </summary>
+        public static string Mode_Perfect {
+            get {
+                return ResourceManager.GetString("Mode_Perfect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 使用不超过方块总数的步数取得胜利 的本地化字符串。
+        /// </summary>
+        public static string Mode_Perfect_Info {
+            get {
+                return ResourceManager.GetString("Mode_Perfect_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 标准模式 的本地化字符串。
+        /// </summary>
+        public static string Mode_Standard {
+            get {
+                return ResourceManager.GetString("Mode_Standard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 使用尽可能少的步数取得胜利 的本地化字符串。
+        /// </summary>
+        public static string Mode_Standard_Info {
+            get {
+                return ResourceManager.GetString("Mode_Standard_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择一个游戏模式 的本地化字符串。
+        /// </summary>
+        public static string ModePage_Choose {
+            get {
+                return ResourceManager.GetString("ModePage_Choose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 继续 的本地化字符串。
+        /// </summary>
+        public static string ModePage_Next {
+            get {
+                return ResourceManager.GetString("ModePage_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择模式 的本地化字符串。
+        /// </summary>
+        public static string ModePage_Title {
+            get {
+                return ResourceManager.GetString("ModePage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 取消 的本地化字符串。
+        /// </summary>
+        public static string MsgBox_Cancel {
+            get {
+                return ResourceManager.GetString("MsgBox_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 否 的本地化字符串。
+        /// </summary>
+        public static string MsgBox_No {
+            get {
+                return ResourceManager.GetString("MsgBox_No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 确定 的本地化字符串。
+        /// </summary>
+        public static string MsgBox_OK {
+            get {
+                return ResourceManager.GetString("MsgBox_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 是 的本地化字符串。
+        /// </summary>
+        public static string MsgBox_Yes {
+            get {
+                return ResourceManager.GetString("MsgBox_Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开放源代码许可 的本地化字符串。
+        /// </summary>
+        public static string SettingsPage_Licence {
+            get {
+                return ResourceManager.GetString("SettingsPage_Licence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 竖屏锁定 的本地化字符串。
+        /// </summary>
+        public static string SettingsPage_PortraitOnly {
+            get {
+                return ResourceManager.GetString("SettingsPage_PortraitOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 保存更改 的本地化字符串。
+        /// </summary>
+        public static string SettingsPage_SaveChanges {
+            get {
+                return ResourceManager.GetString("SettingsPage_SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 测试模式 的本地化字符串。
+        /// </summary>
+        public static string SettingsPage_TestMode {
+            get {
+                return ResourceManager.GetString("SettingsPage_TestMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 设置 的本地化字符串。
+        /// </summary>
+        public static string SettingsPage_Title {
+            get {
+                return ResourceManager.GetString("SettingsPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 更改未保存 的本地化字符串。
+        /// </summary>
+        public static string SettingsPage_UnsavedChanges {
+            get {
+                return ResourceManager.GetString("SettingsPage_UnsavedChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 经典:3x3 的本地化字符串。
+        /// </summary>
+        public static string Size_3 {
+            get {
+                return ResourceManager.GetString("Size_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 简单:4x4 的本地化字符串。
+        /// </summary>
+        public static string Size_4 {
+            get {
+                return ResourceManager.GetString("Size_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 中等:5x5 的本地化字符串。
+        /// </summary>
+        public static string Size_5 {
+            get {
+                return ResourceManager.GetString("Size_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 困难:6x6 的本地化字符串。
+        /// </summary>
+        public static string Size_6 {
+            get {
+                return ResourceManager.GetString("Size_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 困难:7x7 的本地化字符串。
+        /// </summary>
+        public static string Size_7 {
+            get {
+                return ResourceManager.GetString("Size_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 困难:8x8 的本地化字符串。
+        /// </summary>
+        public static string Size_8 {
+            get {
+                return ResourceManager.GetString("Size_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 中等:9x9 的本地化字符串。
+        /// </summary>
+        public static string Size_9 {
+            get {
+                return ResourceManager.GetString("Size_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 任意:_x_ 的本地化字符串。
+        /// </summary>
+        public static string Size_Given {
+            get {
+                return ResourceManager.GetString("Size_Given", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 随机:?x? 的本地化字符串。
+        /// </summary>
+        public static string Size_Random {
+            get {
+                return ResourceManager.GetString("Size_Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择尺寸 的本地化字符串。
+        /// </summary>
+        public static string SizePage_Test_Choose {
+            get {
+                return ResourceManager.GetString("SizePage_Test_Choose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 警告:选择过大的游戏尺寸会使游戏加载时间大幅上升,并且你的屏幕可能不支持这么大的游戏尺寸。 的本地化字符串。
+        /// </summary>
+        public static string SizePage_Test_Warn {
+            get {
+                return ResourceManager.GetString("SizePage_Test_Warn", resourceCulture);
+            }
+        }
     }
 }

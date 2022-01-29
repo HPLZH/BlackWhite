@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using static BW_Mobile.Properties.Resources;
+
 namespace BW_Mobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -150,14 +152,14 @@ namespace BW_Mobile
                     //state
                     infoElements.Add("stateStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
                     infoElements.Add("state", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
-                    infoElements.Add("newGame", new Button { TextColor = ((Device.RuntimePlatform == Device.UWP) ? Color.White : Color.Default), Text = "开始新游戏" });
+                    infoElements.Add("newGame", new Button { TextColor = ((Device.RuntimePlatform == Device.UWP) ? Color.White : Color.Default), Text = GamePage_NewGame });
                     ((Button)infoElements["newGame"]).Clicked += NewGame;
                     infoArea.Children.Add(infoElements["stateStack"]);
                     ((StackLayout)infoElements["stateStack"]).Children.Add(infoElements["state"]);
                     ((StackLayout)infoElements["stateStack"]).Children.Add(infoElements["newGame"]);
                     //count
                     infoElements.Add("countStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
-                    infoElements.Add("countLabel", new Label { TextColor = Color.White, FontSize = 20, Text = "已用步数", HorizontalTextAlignment = TextAlignment.Center });
+                    infoElements.Add("countLabel", new Label { TextColor = Color.White, FontSize = 20, Text = GamePage_UsedClicks, HorizontalTextAlignment = TextAlignment.Center });
                     infoElements.Add("standardCount", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
                     infoArea.Children.Add(infoElements["countStack"]);
                     ((StackLayout)infoElements["countStack"]).Children.Add(infoElements["countLabel"]);
@@ -167,14 +169,14 @@ namespace BW_Mobile
                     //state
                     infoElements.Add("stateStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
                     infoElements.Add("state", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
-                    infoElements.Add("newGame", new Button { TextColor = ((Device.RuntimePlatform == Device.UWP) ? Color.White : Color.Default), Text = "开始新游戏" });
+                    infoElements.Add("newGame", new Button { TextColor = ((Device.RuntimePlatform == Device.UWP) ? Color.White : Color.Default), Text = GamePage_NewGame });
                     ((Button)infoElements["newGame"]).Clicked += NewGame;
                     infoArea.Children.Add(infoElements["stateStack"]);
                     ((StackLayout)infoElements["stateStack"]).Children.Add(infoElements["state"]);
                     ((StackLayout)infoElements["stateStack"]).Children.Add(infoElements["newGame"]);
                     //count
                     infoElements.Add("countStack", new StackLayout { HorizontalOptions = LayoutOptions.CenterAndExpand });
-                    infoElements.Add("countLabel", new Label { TextColor = Color.White, FontSize = 20, Text = "剩余步数", HorizontalTextAlignment = TextAlignment.Center });
+                    infoElements.Add("countLabel", new Label { TextColor = Color.White, FontSize = 20, Text = GamePage_LeftClicks, HorizontalTextAlignment = TextAlignment.Center });
                     infoElements.Add("perfectCount", new Label { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center });
                     infoArea.Children.Add(infoElements["countStack"]);
                     ((StackLayout)infoElements["countStack"]).Children.Add(infoElements["countLabel"]);
@@ -186,9 +188,9 @@ namespace BW_Mobile
             }
             if (useSeed)
             {
-                //要改
-                infoElements.Add("seed", new Label { Text = $"种子: {core.Seed}" });
-                infoArea.Children.Add(infoElements["seed"]);
+                //要改,暂时没有这个功能
+                //infoElements.Add("seed", new Label { Text = $"种子: {core.Seed}" });
+                //infoArea.Children.Add(infoElements["seed"]);
             }
             //RefreshInfoArea();
         }
@@ -213,24 +215,24 @@ namespace BW_Mobile
                     if (orientation != 0)
                     {
                         Title = "";
-                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? "你胜利了" : "未完成";
+                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? GamePage_State_Win : GamePage_State_NoResult;
                         ((Label)infoElements["standardCount"]).Text = $"{core.Count}";
                     }
                     else
                     {
-                        Title = $"{((core.Result == GameResult.Win) ? "胜利! " : "")}已用步数: {core.Count}";
+                        Title = App.Replace((core.Result == GameResult.Win) ? GamePage_Title_Standard_Win : GamePage_Title_Standard_NoResult, core.Count.ToString());
                     }
                     break;
                 case "perfect":
                     if (orientation != 0)
                     {
                         Title = "";
-                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? "你胜利了" : ((core.Result == GameResult.Lose) ? "你失败了" : "未完成");
+                        ((Label)infoElements["state"]).Text = (core.Result == GameResult.Win) ? GamePage_State_Win : ((core.Result == GameResult.Lose) ? GamePage_State_Lose : GamePage_State_NoResult);
                         ((Label)infoElements["perfectCount"]).Text = $"{core.GameSize * core.GameSize - core.Count}";
                     }
                     else
                     {
-                        Title = $"{((core.Result == GameResult.Win) ? "胜利! " : ((core.Result == GameResult.Lose) ? "失败! " : ""))}剩余步数: {core.GameSize * core.GameSize - core.Count}";
+                        Title = (core.Result == GameResult.Lose) ? GamePage_State_Lose : App.Replace((core.Result == GameResult.Win) ? GamePage_Title_Perfect_Win : GamePage_Title_Perfect_NoResult, (core.GameSize * core.GameSize - core.Count).ToString());
                     }
                     break;
                 default:
@@ -347,10 +349,10 @@ namespace BW_Mobile
                 switch (gamemode)
                 {
                     case STANDARD:
-                        response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步", "再来一局", "确定");
+                        response = await DisplayAlert(GamePage_Msg_Title_GameEnd_Win, App.Replace(GamePage_Msg_Standard_Win,Environment.NewLine,core.Count.ToString()),GamePage_MsgBox_NextNewGame, MsgBox_OK);
                         break;
                     case PERFECT:
-                        response = await DisplayAlert("游戏结束", $"你胜利了!{Environment.NewLine}总共用了{core.Count}步{Environment.NewLine}还剩{core.GameSize * core.GameSize - core.Count}步", "再来一局", "确定");
+                        response = await DisplayAlert(GamePage_Msg_Title_GameEnd_Win, App.Replace(GamePage_Msg_Perfect_Win, Environment.NewLine, core.Count.ToString(), (core.GameSize * core.GameSize - core.Count).ToString()), GamePage_MsgBox_NextNewGame, MsgBox_OK);
                         break;
                     default:
                         break;
@@ -364,13 +366,13 @@ namespace BW_Mobile
             }
             else if(core.Result == GameResult.Lose)
             {
-                await DisplayAlert("游戏结束", $"你失败了{Environment.NewLine}你还可以尝试继续完成游戏", "确定");
+                await DisplayAlert(GamePage_Msg_Title_GameEnd_Lose, App.Replace(GamePage_Msg_Perfect_Lose,Environment.NewLine), MsgBox_OK);
             }
         }
         
         private async void NewGame(object sender, EventArgs e)
         {
-            bool response = await DisplayAlert("开始新游戏", "你确定要开始新游戏吗?", "是", "否");
+            bool response = await DisplayAlert(GamePage_NewGame, GamePage_Msg_NewGame, MsgBox_OK, MsgBox_Cancel);
             if (response)
             {
                 StartGame();

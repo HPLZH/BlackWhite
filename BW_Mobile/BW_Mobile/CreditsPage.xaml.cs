@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace BW_Mobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DevelopersPage : ContentPage
+    public partial class CreditsPage : ContentPage
     {
-        public DevelopersPage()
+        public CreditsPage()
         {
             InitializeComponent();
         }
