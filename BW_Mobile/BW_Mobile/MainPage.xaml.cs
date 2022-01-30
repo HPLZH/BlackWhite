@@ -98,7 +98,7 @@ namespace BW_Mobile
 
         private async void lang_Clicked(object sender, EventArgs e)
         {
-            string langResult = await DisplayActionSheet(Properties.Resources.MainPage_Language,askLang ? null : Properties.Resources.MsgBox_Cancel, Properties.Resources.MainPage_Language_System, "简体中文", "English");
+            string langResult = await DisplayActionSheet(Properties.Resources.MainPage_Language, askLang ? null : Properties.Resources.MsgBox_Cancel, null, Properties.Resources.MainPage_Language_System, "简体中文", "English");
             string langFinalResult = "%system%";
             if (langResult == Properties.Resources.MsgBox_Cancel)
             {
@@ -107,6 +107,8 @@ namespace BW_Mobile
             askLang = false;
             switch (langResult)
             {
+                case null:
+                    return;
                 case "简体中文":
                     langFinalResult = "zh-CN";
                     break;

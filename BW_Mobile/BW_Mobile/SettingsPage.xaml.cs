@@ -20,7 +20,7 @@ namespace BW_Mobile
             InitializeComponent();
             settings = new Settings();
             parentPage = parent;
-            version.Text = $"{App.Version.ToString()}{(App.Preview ? " Preview":"")}";
+            version.Text = $"{App.Version}{(App.Preview ? " Preview":"")}";
             paltform.Text = Device.RuntimePlatform;
             releaseDate.Text = App.ReleaseDate;
             swTestMode.IsToggled = settings.TestMode;
@@ -71,7 +71,7 @@ namespace BW_Mobile
 
         private void swPortraitOnly_Toggled(object sender, ToggledEventArgs e)
         {
-            settings.PortraitOnly = swTestMode.IsToggled;
+            settings.PortraitOnly = swPortraitOnly.IsToggled;
             emptyLab.IsVisible = false;
             saveInfo.IsVisible = true;
         }
