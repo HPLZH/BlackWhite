@@ -191,6 +191,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BW_Mobile.UWP_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\en\Resources.resw" />
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

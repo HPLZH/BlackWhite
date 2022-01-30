@@ -32,11 +32,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="BW_Mobile.UWP.App">
       <uap:VisualElements
-        DisplayName="黑白"
+        DisplayName="ms-resource:AppDisplayName"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="BW_Mobile.UWP"
-        BackgroundColor="transparent">
+        BackgroundColor="transparent" Description="ms-resource:Description">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
