@@ -137,6 +137,26 @@
     <value>翻译</value>
     <comment>翻译</comment>
   </data>
+  <data name="DebugPage_Device" xml:space="preserve">
+    <value>设备信息</value>
+    <comment>设备信息</comment>
+  </data>
+  <data name="DebugPage_Language" xml:space="preserve">
+    <value>语言</value>
+    <comment>语言</comment>
+  </data>
+  <data name="DebugPage_ScreenSize" xml:space="preserve">
+    <value>屏幕尺寸</value>
+    <comment>屏幕尺寸</comment>
+  </data>
+  <data name="DebugPage_Title" xml:space="preserve">
+    <value>调试信息</value>
+    <comment>调试信息</comment>
+  </data>
+  <data name="DebugPage_Version" xml:space="preserve">
+    <value>版本</value>
+    <comment>版本</comment>
+  </data>
   <data name="GameName" xml:space="preserve">
     <value>黑白</value>
     <comment>黑白</comment>
@@ -213,9 +233,29 @@
     <value>已用步数</value>
     <comment>已用步数</comment>
   </data>
+  <data name="HelpPage_HowToPlay_Text" xml:space="preserve">
+    <value>点击一个格子,它和与它相邻的上下左右(如果有)四个格子变色(黑变白,白变黑)</value>
+    <comment>点击一个格子,它和与它相邻的上下左右(如果有)四个格子变色(黑变白,白变黑)</comment>
+  </data>
+  <data name="HelpPage_HowToPlay_Title" xml:space="preserve">
+    <value>操作方法</value>
+    <comment>操作方法</comment>
+  </data>
+  <data name="HelpPage_HowToWin_Text" xml:space="preserve">
+    <value>在失败前使所有格子全部变成同一种颜色即可获胜</value>
+    <comment>在失败前使所有格子全部变成同一种颜色即可获胜</comment>
+  </data>
+  <data name="HelpPage_HowToWin_Title" xml:space="preserve">
+    <value>获胜条件</value>
+    <comment>获胜条件</comment>
+  </data>
   <data name="HelpPage_Title" xml:space="preserve">
     <value>帮助</value>
     <comment>帮助</comment>
+  </data>
+  <data name="HelpPage_Try" xml:space="preserve">
+    <value>试一试</value>
+    <comment>试一试</comment>
   </data>
   <data name="MainPage_Debug" xml:space="preserve">
     <value>调试信息</value>

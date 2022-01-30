@@ -6,15 +6,12 @@
              Title="{x:Static resources:Resources.HelpPage_Title}">
     <ScrollView>
         <StackLayout Padding="20">
-            <Label TextColor="Black">此页面还未被翻译</Label>
-            <Label TextColor="Black">This page has not been translated.</Label>
-            <Label></Label>
-            <Label FontSize="Subtitle" TextColor="Black">操作方法</Label>
-            <Label TextColor="Black">点击一个格子,它和与它相邻的上下左右(如果有)四个格子变色(黑变白,白变黑)</Label>
-            <Button Text="自己试一试" Clicked="Button_Clicked" />
+            <Label FontSize="Subtitle" TextColor="Black" Text="{x:Static resources:Resources.HelpPage_HowToPlay_Title}"></Label>
+            <Label TextColor="Black" Text="{x:Static resources:Resources.HelpPage_HowToPlay_Text}"></Label>
+            <Button Text="{x:Static resources:Resources.HelpPage_Try}" Clicked="Button_Clicked" />
             <Label> </Label>
-            <Label FontSize="Subtitle" TextColor="Black">获胜条件</Label>
-            <Label TextColor="Black">所有格子全部变成同一种颜色即可获胜</Label>
+            <Label FontSize="Subtitle" TextColor="Black" Text="{x:Static resources:Resources.HelpPage_HowToWin_Title}"></Label>
+            <Label TextColor="Black" Text="{x:Static resources:Resources.HelpPage_HowToWin_Text}"></Label>
         </StackLayout>
     </ScrollView>
 </ContentPage>

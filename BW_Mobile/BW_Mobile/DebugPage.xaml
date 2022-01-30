@@ -3,25 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:resources="clr-namespace:BW_Mobile.Properties"
              x:Class="BW_Mobile.DebugPage"
-             Title="调试信息">
+             Title="{x:Static resources:Resources.DebugPage_Title}">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20">
-                <Label FontSize="Subtitle">版本</Label>
+                <Label FontSize="Subtitle" Text="{x:Static resources:Resources.DebugPage_Version}"></Label>
                 <Label x:Name="version"></Label>
                 <Label></Label>
-                <Label FontSize="Subtitle">平台</Label>
-                <Label x:Name="paltform"></Label>
+                <Label FontSize="Subtitle" Text="{x:Static resources:Resources.DebugPage_Device}"></Label>
+                <Label x:Name="device"></Label>
                 <Label></Label>
-                <Label FontSize="Subtitle">设备类型</Label>
-                <Label x:Name="idiom"></Label>
-                <Label></Label>
-                <Label FontSize="Subtitle">语言</Label>
+                <Label FontSize="Subtitle" Text="{x:Static resources:Resources.DebugPage_Language}"></Label>
                 <Label x:Name="langResources"></Label>
                 <Label x:Name="langCurrent"></Label>
                 <Label x:Name="langCurrentUI"></Label>
                 <Label></Label>
-                <Label FontSize="Subtitle">屏幕尺寸</Label>
+                <Label FontSize="Subtitle" Text="{x:Static resources:Resources.DebugPage_ScreenSize}"></Label>
                 <Label x:Name="size"></Label>
             </StackLayout>
         </ScrollView>

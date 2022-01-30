@@ -106,6 +106,51 @@ namespace BW_Mobile.Properties {
         }
         
         /// <summary>
+        ///   查找类似 设备信息 的本地化字符串。
+        /// </summary>
+        public static string DebugPage_Device {
+            get {
+                return ResourceManager.GetString("DebugPage_Device", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 语言 的本地化字符串。
+        /// </summary>
+        public static string DebugPage_Language {
+            get {
+                return ResourceManager.GetString("DebugPage_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 屏幕尺寸 的本地化字符串。
+        /// </summary>
+        public static string DebugPage_ScreenSize {
+            get {
+                return ResourceManager.GetString("DebugPage_ScreenSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 调试信息 的本地化字符串。
+        /// </summary>
+        public static string DebugPage_Title {
+            get {
+                return ResourceManager.GetString("DebugPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 版本 的本地化字符串。
+        /// </summary>
+        public static string DebugPage_Version {
+            get {
+                return ResourceManager.GetString("DebugPage_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 黑白 的本地化字符串。
         /// </summary>
         public static string GameName {
@@ -277,11 +322,56 @@ namespace BW_Mobile.Properties {
         }
         
         /// <summary>
+        ///   查找类似 点击一个格子,它和与它相邻的上下左右(如果有)四个格子变色(黑变白,白变黑) 的本地化字符串。
+        /// </summary>
+        public static string HelpPage_HowToPlay_Text {
+            get {
+                return ResourceManager.GetString("HelpPage_HowToPlay_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 操作方法 的本地化字符串。
+        /// </summary>
+        public static string HelpPage_HowToPlay_Title {
+            get {
+                return ResourceManager.GetString("HelpPage_HowToPlay_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 在失败前使所有格子全部变成同一种颜色即可获胜 的本地化字符串。
+        /// </summary>
+        public static string HelpPage_HowToWin_Text {
+            get {
+                return ResourceManager.GetString("HelpPage_HowToWin_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 获胜条件 的本地化字符串。
+        /// </summary>
+        public static string HelpPage_HowToWin_Title {
+            get {
+                return ResourceManager.GetString("HelpPage_HowToWin_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 帮助 的本地化字符串。
         /// </summary>
         public static string HelpPage_Title {
             get {
                 return ResourceManager.GetString("HelpPage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 试一试 的本地化字符串。
+        /// </summary>
+        public static string HelpPage_Try {
+            get {
+                return ResourceManager.GetString("HelpPage_Try", resourceCulture);
             }
         }
         

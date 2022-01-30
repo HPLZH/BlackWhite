@@ -16,19 +16,18 @@ namespace BW_Mobile
         {
             InitializeComponent();
             version.Text = App.Version.ToString() + (App.Preview ? " Preview" : ""); // + Environment.NewLine + "Build " + Environment.Version.Build;
-            paltform.Text = Device.RuntimePlatform;
-            idiom.Text = Device.Idiom.ToString();
+            device.Text = $"{Device.RuntimePlatform};{Device.Idiom}";
             //Properties.Resources.Culture = System.Globalization.CultureInfo.CurrentCulture;
             if(Properties.Resources.Culture != null)
             {
-                langResources.Text = $"Resources:[{Properties.Resources.Culture.Name}]{Properties.Resources.Culture.DisplayName}";
+                langResources.Text = $"Resources:[{Properties.Resources.Culture.Name}]{Properties.Resources.Culture.NativeName}";
             }
             else
             {
                 langResources.Text = "Resources:[null]";
             }
-            langCurrent.Text = $"Current:[{System.Globalization.CultureInfo.CurrentCulture.Name}]{System.Globalization.CultureInfo.CurrentCulture.DisplayName}";
-            langCurrentUI.Text = $"CurrentUI:[{System.Globalization.CultureInfo.CurrentCulture.Name}]{System.Globalization.CultureInfo.CurrentCulture.DisplayName}";
+            langCurrent.Text = $"Current:[{System.Globalization.CultureInfo.CurrentCulture.Name}]{System.Globalization.CultureInfo.CurrentCulture.NativeName}";
+            langCurrentUI.Text = $"CurrentUI:[{System.Globalization.CultureInfo.CurrentCulture.Name}]{System.Globalization.CultureInfo.CurrentCulture.NativeName}";
             
         }
 
