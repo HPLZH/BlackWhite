@@ -6,9 +6,9 @@ namespace BW_Mobile
 {
     public partial class App : Application , IReLoad
     {
-        public static Version Version => new Version(2, 4, 15);
+        public static Version Version => new Version(2, 4, 16);
         public static bool Preview => false;
-        public static string ReleaseDate => new DateTime(2022,1,31).ToLongDateString();
+        public static string ReleaseDate => new DateTime(2022,2,1).ToLongDateString();
 
         /// <summary>
         /// 用输入的参数替换原字符串中的 %_% ,中间的数字(序号)表示对应的参数的位置(从1开始), %0% 表示 %

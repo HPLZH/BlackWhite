@@ -5,7 +5,7 @@
              x:Class="BW_Mobile.GamePage">
     <ContentPage.Content>
         <StackLayout x:Name="mainStack">
-            <ScrollView Orientation="Both">
+            <ScrollView Orientation="Both" x:Name="scrInfo">
             <Frame x:Name="info" BackgroundColor="#2196F3" Padding="24" CornerRadius="0" WidthRequest="102" HeightRequest="102">
                 <StackLayout x:Name="infoArea">
                     

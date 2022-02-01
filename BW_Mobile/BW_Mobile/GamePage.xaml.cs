@@ -263,17 +263,17 @@ namespace BW_Mobile
                 {
                     case 0:
                         mainStack.Orientation = StackOrientation.Horizontal;
-                        info.IsVisible = false;
+                        scrInfo.IsVisible = false;
                         infoArea.Orientation = StackOrientation.Vertical;
                         break;
                     case 1:
                         mainStack.Orientation = StackOrientation.Vertical;
-                        info.IsVisible = true;
+                        scrInfo.IsVisible = true;
                         infoArea.Orientation = StackOrientation.Horizontal;
                         break;
                     case -1:
                         mainStack.Orientation = StackOrientation.Horizontal;
-                        info.IsVisible = true;
+                        scrInfo.IsVisible = true;
                         infoArea.Orientation = StackOrientation.Vertical;
                         break;
                 }
