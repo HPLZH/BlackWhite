@@ -16,11 +16,9 @@ body>div {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 16px;
-    padding: 10px;
-    overflow-x: auto;
-}
-div>div {
-    overflow-x: auto;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
 }
 table {
     border-collapse: collapse;

@@ -10,12 +10,15 @@
     </head>
     <body>
         <h1>黑白</h1>
-        <div style="width: fit-content;">
-            <div>
-                <table id="Game">
-                
-                </table>
-            </div>
+        <div>
+            <button onclick="clearGame();">清空</button>
+            <button onclick="randomClick();">常规生成</button>
+            <button onclick="randomSet();">直接生成</button>
+        </div>
+        <div>
+            <table id="Game">
+            
+            </table>
         </div>
         <script>
             init();
