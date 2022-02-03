@@ -42,6 +42,7 @@ function setBlock(r,c,value){
 
 function randomClick(){
     //alert(0)
+    clearGame();
     for(ir=0;ir<gameSize;ir++){
         for(ic=0;ic<gameSize;ic++){
             if(Math.random()<0.5){
