@@ -1,0 +1,30 @@
+body {
+    padding: 10px;
+}
+button.GW,button.GB {
+    height: 30px;
+    width: 30px;
+}
+button.GW{
+    background-color: white;
+}
+button.GB{
+    background-color: black;
+}
+body>div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 10px;
+    overflow-x: auto;
+}
+div>div {
+    overflow-x: auto;
+}
+table {
+    border-collapse: collapse;
+}
+table,th,td {
+    white-space: nowrap;
+}
