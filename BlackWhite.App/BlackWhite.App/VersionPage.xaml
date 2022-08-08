@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:BlackWhite.App.Properties"
+             x:Class="BlackWhite.App.VersionPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label HorizontalOptions="Center" FontSize="{OnPlatform Android=48, UWP=Header}" Text="{x:Static p:App.AppName}"></Label>
+                <Label HorizontalOptions="Center" FontSize="Large" x:Name="version"></Label>
+                <Label HorizontalOptions="Center" FontSize="Large" x:Name="paltform"></Label>
+                <Label></Label>
+                <Label FontSize="Large" HorizontalOptions="Center" Text="{x:Static p:VersionPage.GameDesigning}"></Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">赖嘉宏</Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">李子晗</Label>
+                <Label></Label>
+                <Label FontSize="Large" HorizontalOptions="Center" Text="{x:Static p:VersionPage.Programming}"></Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">李子晗</Label>
+                <Label></Label>
+                <Label FontSize="Large" HorizontalOptions="Center" Text="{x:Static p:VersionPage.Testing}"></Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">李子晗</Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">王梓欣</Label>
+                <Label></Label>
+                <Label x:Name="releaseDate" FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="End"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

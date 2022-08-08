@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using BlackWhite.App;
 using Android.App;
 
 // General Information about an assembly is controlled through the following 
@@ -11,7 +12,7 @@ using Android.App;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BlackWhite.App.Android")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("Copyright © 李子晗 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
@@ -25,6 +26,13 @@ using Android.App;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
+[assembly: MetaData("android:versionName", Value = AppVersion.MainVersion+"." + AppVersion.SubVersion + "." + AppVersion.Build)]
+[assembly: MetaData("android:versionCode", Value = AppVersion.Build)]
+
+#if DEBUG
+[assembly: MetaData("package", Value = "cn.hplzh.blackwhite.app.debug")]
+#else
+[assembly: MetaData("package", Value = "cn.hplzh.blackwhite.app")]
+#endif
+
 // Add some common permissions, these can be removed if not needed
-[assembly: UsesPermission(Android.Manifest.Permission.Internet)]
-[assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
