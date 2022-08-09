@@ -24,14 +24,5 @@ namespace BlackWhite.App
             get => PropertiesIO.GetWithDefault<bool>(true, SETTINGS, STATISTICS);
             set => PropertiesIO.Set<bool>(value, SETTINGS, STATISTICS);
         }
-
-        //Android
-        //设备方向
-        const string PORTRAIT = "Portrait";
-        public static bool Portrait
-        {
-            get => PropertiesIO.Get<bool>(SETTINGS, PORTRAIT);
-            set => PropertiesIO.Set<bool>(value, SETTINGS, PORTRAIT);
-        }
     }
 }
