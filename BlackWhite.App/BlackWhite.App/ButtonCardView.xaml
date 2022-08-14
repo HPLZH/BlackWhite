@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlackWhite.App.ButtonCardView"
+             Margin="5">
+  <ContentView.Content>
+        <Frame BackgroundColor="{AppThemeBinding Dark=Black,Light=White,Default=White}" BorderColor="Gray" Padding="20" CornerRadius="8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="titleLabel" FontSize="Title" TextColor="{AppThemeBinding Dark=White,Light=Black,Default=Black}" Grid.Column="0" Grid.Row="0"></Label>
+                <Label x:Name="textLabel" FontSize="Default" TextColor="{AppThemeBinding Dark=White,Light=Black,Default=Black}" Grid.Column="0" Grid.Row="1"></Label>
+                <Button x:Name="button" FontSize="Title" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Clicked="button_Clicked"></Button>
+            </Grid>
+        </Frame>
+  </ContentView.Content>
+</ContentView>

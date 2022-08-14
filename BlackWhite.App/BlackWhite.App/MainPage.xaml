@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:p="clr-namespace:BlackWhite.App.Properties"
+             xmlns:c="clr-namespace:BlackWhite.App"
              x:Class="BlackWhite.App.MainPage">
 
     <StackLayout>
@@ -10,12 +11,13 @@
         </Frame>
         <ScrollView>
             <StackLayout Padding="20">
-                <Button Text="{x:Static p:MainPage.Start}"></Button>
-                <Button Text="{x:Static p:MainPage.Settings}"></Button>
-                <Button Text="{x:Static p:MainPage.Statistics}"></Button>
-                <Button Text="{x:Static p:MainPage.Help}"></Button>
-                <Button Text="{x:Static p:MainPage.Version}"></Button>
-                <Button Text="{x:Static p:MainPage.Language}"></Button>
+                <Button Text="{x:Static p:MainPage.Start}" Clicked="Button_Clicked_Start"></Button>
+                <Button Text="{x:Static p:MainPage.Settings}" IsVisible="False"></Button>
+                <Button Text="{x:Static p:MainPage.Statistics}" Clicked="Button_Clicked_Statistics"></Button>
+                <Button Text="{x:Static p:MainPage.Help}" IsVisible="False"></Button>
+                <Button Text="{x:Static p:MainPage.Version}" Clicked="Button_Clicked_Version"></Button>
+                <Button Text="{x:Static p:MainPage.Language}" Clicked="Button_Clicked_Language" x:Name="languageButton"></Button>
+                <Label Text="{x:Static p:MainPage.Preview}" HorizontalTextAlignment="Center" IsVisible="{x:Static c:AppVersion.Preview}"></Label>
             </StackLayout>
         </ScrollView>
     </StackLayout>

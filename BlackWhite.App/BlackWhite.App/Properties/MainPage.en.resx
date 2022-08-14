@@ -118,27 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Help" xml:space="preserve">
-    <value>帮助</value>
+    <value>Help</value>
+    <comment>帮助</comment>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>语言</value>
+    <value>Language</value>
   </data>
   <data name="LanguageChoose" xml:space="preserve">
-    <value>选择语言</value>
+    <value>Choose your language</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value>预览版本</value>
+    <value>Preview</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>设置</value>
+    <value>Settings</value>
+    <comment>设置</comment>
   </data>
   <data name="Start" xml:space="preserve">
-    <value>开始</value>
+    <value>Start</value>
+    <comment>开始</comment>
   </data>
   <data name="Statistics" xml:space="preserve">
-    <value>统计</value>
+    <value>Statistics</value>
+    <comment>统计</comment>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>版本信息</value>
+    <value>Version</value>
+    <comment>版本信息</comment>
   </data>
 </root>

@@ -117,28 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Help" xml:space="preserve">
-    <value>帮助</value>
+  <data name="Free" xml:space="preserve">
+    <value>自由模式</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>语言</value>
+  <data name="Free_Text" xml:space="preserve">
+    <value>探索游戏的规律</value>
   </data>
-  <data name="LanguageChoose" xml:space="preserve">
-    <value>选择语言</value>
+  <data name="Next" xml:space="preserve">
+    <value>继续</value>
   </data>
-  <data name="Preview" xml:space="preserve">
-    <value>预览版本</value>
+  <data name="Normal" xml:space="preserve">
+    <value>标准模式</value>
   </data>
-  <data name="Settings" xml:space="preserve">
-    <value>设置</value>
+  <data name="Normal_Text" xml:space="preserve">
+    <value>使用尽可能少的点击次数完成游戏</value>
   </data>
-  <data name="Start" xml:space="preserve">
-    <value>开始</value>
+  <data name="Perfect" xml:space="preserve">
+    <value>最优解</value>
   </data>
-  <data name="Statistics" xml:space="preserve">
-    <value>统计</value>
+  <data name="Perfect_Text" xml:space="preserve">
+    <value>使用尽可能少的点击次数完成游戏，总点击次数不超过方块总数</value>
   </data>
-  <data name="Version" xml:space="preserve">
-    <value>版本信息</value>
+  <data name="Random" xml:space="preserve">
+    <value>随机</value>
+  </data>
+  <data name="Timed" xml:space="preserve">
+    <value>计时模式</value>
+  </data>
+  <data name="Timed_Text" xml:space="preserve">
+    <value>使用尽可能少的时间完成游戏</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>选择游戏模式</value>
   </data>
 </root>

@@ -22,14 +22,14 @@ namespace BlackWhite.App.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MainPage {
+    internal class GamePage {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal MainPage() {
+        internal GamePage() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace BlackWhite.App.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BlackWhite.App.Properties.MainPage", typeof(MainPage).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BlackWhite.App.Properties.GamePage", typeof(GamePage).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,119 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
-        ///   查找类似 帮助 的本地化字符串。
+        ///   查找类似 已使用 的本地化字符串。
         /// </summary>
-        internal static string Help {
+        internal static string Count {
             get {
-                return ResourceManager.GetString("Help", resourceCulture);
+                return ResourceManager.GetString("Count", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 语言 的本地化字符串。
+        ///   查找类似 取消 的本地化字符串。
         /// </summary>
-        internal static string Language {
+        internal static string Msg_Button_Cancel {
             get {
-                return ResourceManager.GetString("Language", resourceCulture);
+                return ResourceManager.GetString("Msg_Button_Cancel", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 选择语言 的本地化字符串。
+        ///   查找类似 新游戏 的本地化字符串。
         /// </summary>
-        internal static string LanguageChoose {
+        internal static string Msg_Button_NewGame {
             get {
-                return ResourceManager.GetString("LanguageChoose", resourceCulture);
+                return ResourceManager.GetString("Msg_Button_NewGame", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 预览版本 的本地化字符串。
+        ///   查找类似 确定 的本地化字符串。
         /// </summary>
-        internal static string Preview {
+        internal static string Msg_Button_OK {
             get {
-                return ResourceManager.GetString("Preview", resourceCulture);
+                return ResourceManager.GetString("Msg_Button_OK", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 设置 的本地化字符串。
+        ///   查找类似 总共使用了{0}步 的本地化字符串。
         /// </summary>
-        internal static string Settings {
+        internal static string Msg_Text_Count {
             get {
-                return ResourceManager.GetString("Settings", resourceCulture);
+                return ResourceManager.GetString("Msg_Text_Count", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 开始 的本地化字符串。
+        ///   查找类似 你成功完成了游戏 的本地化字符串。
         /// </summary>
-        internal static string Start {
+        internal static string Msg_Text_Finished {
             get {
-                return ResourceManager.GetString("Start", resourceCulture);
+                return ResourceManager.GetString("Msg_Text_Finished", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 统计 的本地化字符串。
+        ///   查找类似 你确定要开始新游戏吗？ 的本地化字符串。
         /// </summary>
-        internal static string Statistics {
+        internal static string Msg_Text_NewGame {
             get {
-                return ResourceManager.GetString("Statistics", resourceCulture);
+                return ResourceManager.GetString("Msg_Text_NewGame", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 版本信息 的本地化字符串。
+        ///   查找类似 完成！ 的本地化字符串。
         /// </summary>
-        internal static string Version {
+        internal static string Msg_Title_Finished {
             get {
-                return ResourceManager.GetString("Version", resourceCulture);
+                return ResourceManager.GetString("Msg_Title_Finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开始新游戏 的本地化字符串。
+        /// </summary>
+        internal static string Msg_Title_NewGame {
+            get {
+                return ResourceManager.GetString("Msg_Title_NewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 新游戏 的本地化字符串。
+        /// </summary>
+        internal static string NewGame {
+            get {
+                return ResourceManager.GetString("NewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 已完成 的本地化字符串。
+        /// </summary>
+        internal static string State_Finished {
+            get {
+                return ResourceManager.GetString("State_Finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 生成中 的本地化字符串。
+        /// </summary>
+        internal static string State_Preparing {
+            get {
+                return ResourceManager.GetString("State_Preparing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 未完成 的本地化字符串。
+        /// </summary>
+        internal static string State_Unfinished {
+            get {
+                return ResourceManager.GetString("State_Unfinished", resourceCulture);
             }
         }
     }

@@ -16,15 +16,34 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BlackWhite.Core\BlackWhite.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\App.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>App.resx</DependentUpon>
     </Compile>
+    <Compile Update="Properties\GamePage.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GamePage.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\MainPage.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>MainPage.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\StartPage.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StartPage.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\StatisticsPage.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StatisticsPage.resx</DependentUpon>
     </Compile>
     <Compile Update="Properties\VersionPage.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -34,17 +53,44 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="ButtonCardView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GamePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\App.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>App.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\GamePage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GamePage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\MainPage.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainPage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Properties\StartPage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StartPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\StatisticsPage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatisticsPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\VersionPage.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>VersionPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SizePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="StartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="StatisticsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="VersionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

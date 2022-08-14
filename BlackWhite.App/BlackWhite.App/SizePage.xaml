@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:BlackWhite.App.Properties"
+             x:Class="BlackWhite.App.SizePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <StackLayout>
+                    <Label x:Name="titleLabel" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                    <Label x:Name="textLabel" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                </StackLayout>
+            </Frame>
+            <ScrollView>
+                <StackLayout x:Name="buttonStack" Padding="20">
+                    <Button x:Name="random" TextTransform="None" Text="{x:Static p:StartPage.Random}" Clicked="random_Clicked"></Button>
+                    <Button x:Name="s3" TextTransform="None" Text="3x3" Clicked="Button_Clicked"></Button>
+                    <Button x:Name="s4" TextTransform="None" Text="4x4" Clicked="Button_Clicked"></Button>
+                    <Button x:Name="s5" TextTransform="None" Text="5x5" Clicked="Button_Clicked"></Button>
+                    <Button x:Name="s6" TextTransform="None" Text="6x6" Clicked="Button_Clicked"></Button>
+                    <Button x:Name="s7" TextTransform="None" Text="7x7" Clicked="Button_Clicked"></Button>
+                    <Button x:Name="s8" TextTransform="None" Text="8x8" Clicked="Button_Clicked"></Button>
+                    <Button x:Name="s9" TextTransform="None" Text="9x9" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

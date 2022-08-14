@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:BlackWhite.App.Properties"
+             xmlns:c="clr-namespace:BlackWhite.App"
+             x:Class="BlackWhite.App.StatisticsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="{x:Static p:StatisticsPage.Normal}" FontSize="Title" HorizontalTextAlignment="Center"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Label Text="{x:Static p:StatisticsPage.Clicks}" Grid.Column="0" Grid.Row="0" />
+                <Label Text="{x:Static p:StatisticsPage.Games}" Grid.Column="0" Grid.Row="1" />
+                <Label Text="{x:Static p:StatisticsPage.Wins}" Grid.Column="0" Grid.Row="2" />
+                <Label x:Name="n_c" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="0" />
+                <Label x:Name="n_g" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1" />
+                <Label x:Name="n_w" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="2" />
+            </Grid>
+            <Label HorizontalTextAlignment="Center">临时页面</Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

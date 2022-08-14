@@ -5,6 +5,7 @@ using System.Text;
 namespace BlackWhite.Core
 {
     public class GameCore<T>
+        where T : IBlock<T>, new()
     {
         /// <summary>
         /// 游戏状态
@@ -59,6 +60,7 @@ namespace BlackWhite.Core
         protected void Initialize(Blocks<T> blocks)
         {
             blocks1 = blocks;
+            blocks1.BlockClicked += (object sender, BlockClickedEventArgs e) => { Count++; BlockClicked(sender,e); Clicked(); };
             State = States.Initialized;
         }
 
@@ -74,25 +76,32 @@ namespace BlackWhite.Core
             State = States.Started;
         }
 
-        public virtual bool Click(uint x, uint y)
+        /// <summary>
+        /// 此事件在Count增加后立即发生，先于状态改变
+        /// </summary>
+        public event EventHandler<BlockClickedEventArgs> BlockClicked = delegate { };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns>返回结果指示是否需要进行后续操作</returns>
+        protected virtual bool Clicked()
         {
-            blocks1.Click(x, y);
-            if (blocks1.IsSame() && State == States.Started) 
+            if (blocks1.IsSame() && State == States.Started)
             {
                 State = States.Ended;
-                return true;
+                GameEnded(this, EventArgs.Empty);
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
         }
 
-        public bool Click(IBlock<T> block)
-        {
-            blocks1.Check(block);
-            return Click(block.X, block.Y);
-        }
+        public event EventHandler GameEnded;
 
         public void Close()
         {

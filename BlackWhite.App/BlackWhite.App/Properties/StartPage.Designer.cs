@@ -22,14 +22,14 @@ namespace BlackWhite.App.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MainPage {
+    internal class StartPage {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal MainPage() {
+        internal StartPage() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace BlackWhite.App.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BlackWhite.App.Properties.MainPage", typeof(MainPage).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BlackWhite.App.Properties.StartPage", typeof(StartPage).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,101 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
-        ///   查找类似 帮助 的本地化字符串。
+        ///   查找类似 自由模式 的本地化字符串。
         /// </summary>
-        internal static string Help {
+        internal static string Free {
             get {
-                return ResourceManager.GetString("Help", resourceCulture);
+                return ResourceManager.GetString("Free", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 语言 的本地化字符串。
+        ///   查找类似 探索游戏的规律 的本地化字符串。
         /// </summary>
-        internal static string Language {
+        internal static string Free_Text {
             get {
-                return ResourceManager.GetString("Language", resourceCulture);
+                return ResourceManager.GetString("Free_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 选择语言 的本地化字符串。
+        ///   查找类似 继续 的本地化字符串。
         /// </summary>
-        internal static string LanguageChoose {
+        internal static string Next {
             get {
-                return ResourceManager.GetString("LanguageChoose", resourceCulture);
+                return ResourceManager.GetString("Next", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 预览版本 的本地化字符串。
+        ///   查找类似 标准模式 的本地化字符串。
         /// </summary>
-        internal static string Preview {
+        internal static string Normal {
             get {
-                return ResourceManager.GetString("Preview", resourceCulture);
+                return ResourceManager.GetString("Normal", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 设置 的本地化字符串。
+        ///   查找类似 使用尽可能少的点击次数完成游戏 的本地化字符串。
         /// </summary>
-        internal static string Settings {
+        internal static string Normal_Text {
             get {
-                return ResourceManager.GetString("Settings", resourceCulture);
+                return ResourceManager.GetString("Normal_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 开始 的本地化字符串。
+        ///   查找类似 最优解 的本地化字符串。
         /// </summary>
-        internal static string Start {
+        internal static string Perfect {
             get {
-                return ResourceManager.GetString("Start", resourceCulture);
+                return ResourceManager.GetString("Perfect", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 统计 的本地化字符串。
+        ///   查找类似 使用尽可能少的点击次数完成游戏，总点击次数不超过方块总数 的本地化字符串。
         /// </summary>
-        internal static string Statistics {
+        internal static string Perfect_Text {
             get {
-                return ResourceManager.GetString("Statistics", resourceCulture);
+                return ResourceManager.GetString("Perfect_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 版本信息 的本地化字符串。
+        ///   查找类似 随机 的本地化字符串。
         /// </summary>
-        internal static string Version {
+        internal static string Random {
             get {
-                return ResourceManager.GetString("Version", resourceCulture);
+                return ResourceManager.GetString("Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 计时模式 的本地化字符串。
+        /// </summary>
+        internal static string Timed {
+            get {
+                return ResourceManager.GetString("Timed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 使用尽可能少的时间完成游戏 的本地化字符串。
+        /// </summary>
+        internal static string Timed_Text {
+            get {
+                return ResourceManager.GetString("Timed_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 选择游戏模式 的本地化字符串。
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

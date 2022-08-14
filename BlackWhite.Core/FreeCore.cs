@@ -5,6 +5,7 @@ using System.Text;
 namespace BlackWhite.Core
 {
     public class FreeCore<T> : GameCore<T>
+        where T : IBlock<T>, new()
     {
         /// <summary>
         /// 点击后的处理方式
@@ -35,6 +36,7 @@ namespace BlackWhite.Core
             State = States.Free;
         }
 
+        /*
         public override bool Click(uint x, uint y)
         {
             if (ClickMode == ClickModes.Normal)
@@ -47,6 +49,7 @@ namespace BlackWhite.Core
             }
             return false;
         }
+        */
 
         /// <summary>
         /// 完全随机生成

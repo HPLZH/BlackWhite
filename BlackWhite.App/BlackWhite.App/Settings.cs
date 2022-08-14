@@ -16,13 +16,5 @@ namespace BlackWhite.App
             get => PropertiesIO.Get<string>(SETTINGS, LANGUAGE);
             set => PropertiesIO.Set<string>(value, SETTINGS, LANGUAGE);
         }
-
-        //统计
-        const string STATISTICS = "Statistics";
-        public static bool EnableStatistics
-        {
-            get => PropertiesIO.GetWithDefault<bool>(true, SETTINGS, STATISTICS);
-            set => PropertiesIO.Set<bool>(value, SETTINGS, STATISTICS);
-        }
     }
 }

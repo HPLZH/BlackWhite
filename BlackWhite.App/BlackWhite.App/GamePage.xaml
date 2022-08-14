@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:BlackWhite.App"
+             x:Class="BlackWhite.App.GamePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="pageStack">
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <ScrollView x:Name="infoArea"></ScrollView>
+            </Frame>
+            <ScrollView Orientation="Both">
+                <AbsoluteLayout Padding="{x:Static c:SizeCalculator.LAYOUT_PADDING}" x:Name="absLayout">
+                    <Grid x:Name="blockGrid"
+                          RowSpacing="{x:Static c:SizeCalculator.SPACING}"
+                          ColumnSpacing="{x:Static c:SizeCalculator.SPACING}"></Grid>
+                </AbsoluteLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
