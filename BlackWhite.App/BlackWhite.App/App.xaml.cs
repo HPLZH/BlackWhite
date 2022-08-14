@@ -36,6 +36,7 @@ namespace BlackWhite.App
             BlackWhite.App.Properties.VersionPage.Culture = culture;
             BlackWhite.App.Properties.StartPage.Culture = culture;
             BlackWhite.App.Properties.GamePage.Culture = culture;
+            BlackWhite.App.Properties.StatisticsPage.Culture = culture;
         }
 
         protected override void OnStart()
