@@ -117,19 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GameDesigning" xml:space="preserve">
-    <value>Game Designing</value>
-    <comment>游戏设计</comment>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
   </data>
-  <data name="Programming" xml:space="preserve">
-    <value>Programming</value>
-    <comment>程序</comment>
+  <data name="AverageClicks" xml:space="preserve">
+    <value>Average number of clicks</value>
   </data>
-  <data name="Testing" xml:space="preserve">
-    <value>Testing</value>
-    <comment>测试</comment>
+  <data name="AverageTime" xml:space="preserve">
+    <value>Average time</value>
   </data>
-  <data name="Translating" xml:space="preserve">
-    <value>Translating</value>
+  <data name="Clicks" xml:space="preserve">
+    <value>Number of clicks</value>
+  </data>
+  <data name="CX_Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Gamemode" xml:space="preserve">
+    <value>Gamemode</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Games played</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Perfect" xml:space="preserve">
+    <value>Perfect</value>
+  </data>
+  <data name="Result_Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>总计</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Total time</value>
+  </data>
+  <data name="Timed" xml:space="preserve">
+    <value>Timed</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="WinPercentage" xml:space="preserve">
+    <value>Win percentage</value>
+  </data>
+  <data name="Wins" xml:space="preserve">
+    <value>Games won</value>
   </data>
 </root>

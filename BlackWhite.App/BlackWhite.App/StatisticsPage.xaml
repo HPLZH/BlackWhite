@@ -7,7 +7,7 @@
              Title="{x:Static p:StatisticsPage.Title}">
     <ContentPage.Content>
         <ScrollView>
-            <TableView x:Name="table">
+            <TableView x:Name="table" HasUnevenRows="True">
                 <TableRoot>
                     <TableSection Title="{x:Static p:StatisticsPage.CX_Title}">
                         <ViewCell>

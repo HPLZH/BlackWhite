@@ -117,19 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GameDesigning" xml:space="preserve">
-    <value>Game Designing</value>
-    <comment>游戏设计</comment>
+  <data name="Count" xml:space="preserve">
+    <value>Used</value>
+    <comment>已使用</comment>
   </data>
-  <data name="Programming" xml:space="preserve">
-    <value>Programming</value>
-    <comment>程序</comment>
+  <data name="Msg_Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>取消</comment>
   </data>
-  <data name="Testing" xml:space="preserve">
-    <value>Testing</value>
-    <comment>测试</comment>
+  <data name="Msg_Button_NewGame" xml:space="preserve">
+    <value>New Game</value>
+    <comment>新游戏</comment>
   </data>
-  <data name="Translating" xml:space="preserve">
-    <value>Translating</value>
+  <data name="Msg_Button_OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>确定</comment>
+  </data>
+  <data name="Msg_Text_Count" xml:space="preserve">
+    <value>Used: {0}</value>
+    <comment>总共使用了{0}步</comment>
+  </data>
+  <data name="Msg_Text_Fail" xml:space="preserve">
+    <value>You failed.</value>
+    <comment>你失败了</comment>
+  </data>
+  <data name="Msg_Text_Finished" xml:space="preserve">
+    <value>You finished it successfully.</value>
+    <comment>你成功完成了游戏</comment>
+  </data>
+  <data name="Msg_Text_NewGame" xml:space="preserve">
+    <value>Start a new game?</value>
+    <comment>你确定要开始新游戏吗？</comment>
+  </data>
+  <data name="Msg_Text_Remaining" xml:space="preserve">
+    <value>Left: {0}</value>
+    <comment>还剩{0}步</comment>
+  </data>
+  <data name="Msg_Title_Fail" xml:space="preserve">
+    <value>Game Over</value>
+    <comment>游戏结束</comment>
+  </data>
+  <data name="Msg_Title_Finished" xml:space="preserve">
+    <value>Completed!</value>
+    <comment>完成！</comment>
+  </data>
+  <data name="Msg_Title_NewGame" xml:space="preserve">
+    <value>New Game</value>
+    <comment>开始新游戏</comment>
+  </data>
+  <data name="NewGame" xml:space="preserve">
+    <value>New Game</value>
+    <comment>新游戏</comment>
+  </data>
+  <data name="Remaining" xml:space="preserve">
+    <value>Left</value>
+    <comment>剩余</comment>
+  </data>
+  <data name="State_Fail" xml:space="preserve">
+    <value>Game Over</value>
+    <comment>失败</comment>
+  </data>
+  <data name="State_Finished" xml:space="preserve">
+    <value>Completed</value>
+    <comment>已完成</comment>
+  </data>
+  <data name="State_Preparing" xml:space="preserve">
+    <value>Preparing</value>
+    <comment>生成中</comment>
+  </data>
+  <data name="State_Unfinished" xml:space="preserve">
+    <value>Playing</value>
+    <comment>未完成</comment>
   </data>
 </root>

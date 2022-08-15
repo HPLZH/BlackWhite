@@ -41,7 +41,7 @@ namespace BlackWhite.App
         private (string Name, string Tag, string ChooseText)[] languageChoose =
         {
             ("简体中文","zh-CN","语言"),
-            //("English","en","Language")
+            ("English","en","Language")
         };
 
         private string[] LanguageStrings()

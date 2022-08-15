@@ -86,5 +86,14 @@ namespace BlackWhite.App.Properties {
                 return ResourceManager.GetString("Testing", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查找类似 翻译 的本地化字符串。
+        /// </summary>
+        internal static string Translating {
+            get {
+                return ResourceManager.GetString("Translating", resourceCulture);
+            }
+        }
     }
 }

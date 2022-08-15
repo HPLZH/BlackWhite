@@ -117,19 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GameDesigning" xml:space="preserve">
-    <value>Game Designing</value>
-    <comment>游戏设计</comment>
+  <data name="Free" xml:space="preserve">
+    <value>Free</value>
+    <comment>自由模式</comment>
   </data>
-  <data name="Programming" xml:space="preserve">
-    <value>Programming</value>
-    <comment>程序</comment>
+  <data name="Free_Text" xml:space="preserve">
+    <value>Do what you want to do.</value>
+    <comment>探索游戏的规律</comment>
   </data>
-  <data name="Testing" xml:space="preserve">
-    <value>Testing</value>
-    <comment>测试</comment>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>继续</comment>
   </data>
-  <data name="Translating" xml:space="preserve">
-    <value>Translating</value>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+    <comment>标准模式</comment>
+  </data>
+  <data name="Normal_Text" xml:space="preserve">
+    <value>Complete the game with less clicks.</value>
+    <comment>使用尽可能少的点击次数完成游戏</comment>
+  </data>
+  <data name="Perfect" xml:space="preserve">
+    <value>Perfect</value>
+    <comment>最优解</comment>
+  </data>
+  <data name="Perfect_Text" xml:space="preserve">
+    <value>Complete the game with limited clicks.</value>
+    <comment>使用尽可能少的点击次数完成游戏，总点击次数不超过方块总数</comment>
+  </data>
+  <data name="Random" xml:space="preserve">
+    <value>Random</value>
+    <comment>随机</comment>
+  </data>
+  <data name="Timed" xml:space="preserve">
+    <value>Timed</value>
+    <comment>计时模式</comment>
+  </data>
+  <data name="Timed_Text" xml:space="preserve">
+    <value>Complete the game with less time.</value>
+    <comment>使用尽可能少的时间完成游戏</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Choose a gamemode</value>
+    <comment>选择游戏模式</comment>
   </data>
 </root>

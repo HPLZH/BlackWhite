@@ -63,6 +63,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>App.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Properties\GamePage.en.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\GamePage.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GamePage.Designer.cs</LastGenOutput>

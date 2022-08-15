@@ -21,6 +21,11 @@
                 <Label FontSize="Medium" HorizontalOptions="Center">李子晗</Label>
                 <Label FontSize="Medium" HorizontalOptions="Center">王梓欣</Label>
                 <Label></Label>
+                <Label FontSize="Large" HorizontalOptions="Center" Text="{x:Static p:VersionPage.Translating}"></Label>
+                <Label FontSize="2"></Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">[ English ]</Label>
+                <Label FontSize="Medium" HorizontalOptions="Center">李子晗</Label>
+                <Label></Label>
                 <Label x:Name="releaseDate" FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="End"></Label>
             </StackLayout>
         </ScrollView>
