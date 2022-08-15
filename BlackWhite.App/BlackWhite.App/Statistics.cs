@@ -24,11 +24,11 @@ namespace BlackWhite.App
             {
                 foreach(string mode in MODE)
                 {
-                    PropertiesIO.Set<ulong>(0, STATISTICS, mode, i.ToString(), CLICK);
-                    PropertiesIO.Set<ulong>(0, STATISTICS, mode, i.ToString(), GAME);
-                    PropertiesIO.Set<ulong>(0, STATISTICS, mode, i.ToString(), WIN);
+                    Set<ulong>(0, STATISTICS, mode, i.ToString(), CLICK);
+                    Set<ulong>(0, STATISTICS, mode, i.ToString(), GAME);
+                    Set<ulong>(0, STATISTICS, mode, i.ToString(), WIN);
                 }
-                PropertiesIO.Set<ulong>(0, STATISTICS, TIMED, i.ToString(), TIME);
+                Set<ulong>(0, STATISTICS, TIMED, i.ToString(), TIME);
             }
         }
 
@@ -159,7 +159,8 @@ namespace BlackWhite.App
 
             //计算
             public static decimal WinPercentage(int size) => (decimal)Wins(size) / (decimal)Games(size);
-            public static decimal AverageTime(int size) => (decimal)Time(size) / (decimal)Games();
+            public static double AverageTime(int size) => (double)Time(size) / (double)Games();
+
         }
     }
 }

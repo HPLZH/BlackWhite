@@ -11,6 +11,11 @@ namespace BlackWhite.Core
 
         public event EventHandler GameStopped;
 
+        public PerfectCore() { }
+
+        public PerfectCore(Blocks<T> blocks,Random random)
+            :base(blocks, random) { }
+
         protected override bool Clicked()
         {
             if(base.Clicked())

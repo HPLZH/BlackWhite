@@ -16,6 +16,12 @@ namespace BlackWhite.App
         public static int GetMax() => GetMaxSize(GetTotal());
         public static double GetBlock(int size) => GetBlockSize(GetTotal(), size);
         
+        public static double GetBlockSizeM(double total, int size)
+        {
+            double result = GetBlockSize(total, size);
+            if (result >= MIN_BLOCK) return result;
+            else return MIN_BLOCK;
+        }
 
         public const double LAYOUT_PADDING = 20;
         public const double SPACING = 5;

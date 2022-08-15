@@ -38,11 +38,11 @@ namespace BlackWhite.App
             {
 				foreach(ColumnDefinition column in blockGrid.ColumnDefinitions)
                 {
-					column.Width = SizeCalculator.GetBlockSize(SizeCalculator.GetTotalSize(width, height), gameSize);
+					column.Width = SizeCalculator.GetBlockSizeM(SizeCalculator.GetTotalSize(width, height), gameSize);
                 }
 				foreach(RowDefinition row in blockGrid.RowDefinitions)
                 {
-					row.Height = SizeCalculator.GetBlockSize(SizeCalculator.GetTotalSize(width, height), gameSize);
+					row.Height = SizeCalculator.GetBlockSizeM(SizeCalculator.GetTotalSize(width, height), gameSize);
                 }
             }
             base.OnSizeAllocated(width, height);

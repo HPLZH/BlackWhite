@@ -22,4 +22,23 @@ namespace BlackWhite.App
             base.StartGame(size);
         }
     }
+
+    internal class PerfectSizePage : SizePage
+    {
+        public PerfectSizePage()
+            :base(Properties.StartPage.Perfect, Properties.StartPage.Perfect_Text) { }
+
+        protected override void StartGame(int size)
+        {
+            if (size == -1)
+            {
+                Navigation.PushAsync(new PerfectGamePage(new Random()));
+            }
+            else
+            {
+                Navigation.PushAsync(new PerfectGamePage(size));
+            }
+            base.StartGame(size);
+        }
+    }
 }

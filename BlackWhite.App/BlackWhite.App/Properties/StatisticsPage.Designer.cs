@@ -70,11 +70,47 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 平均每场点击次数 的本地化字符串。
+        /// </summary>
+        internal static string AverageClicks {
+            get {
+                return ResourceManager.GetString("AverageClicks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 平均用时 的本地化字符串。
+        /// </summary>
+        internal static string AverageTime {
+            get {
+                return ResourceManager.GetString("AverageTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 点击次数 的本地化字符串。
         /// </summary>
         internal static string Clicks {
             get {
                 return ResourceManager.GetString("Clicks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 查询条件 的本地化字符串。
+        /// </summary>
+        internal static string CX_Title {
+            get {
+                return ResourceManager.GetString("CX_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏模式 的本地化字符串。
+        /// </summary>
+        internal static string Gamemode {
+            get {
+                return ResourceManager.GetString("Gamemode", resourceCulture);
             }
         }
         
@@ -106,6 +142,33 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 查询结果 的本地化字符串。
+        /// </summary>
+        internal static string Result_Title {
+            get {
+                return ResourceManager.GetString("Result_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏尺寸 的本地化字符串。
+        /// </summary>
+        internal static string Size {
+            get {
+                return ResourceManager.GetString("Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 总计 的本地化字符串。
+        /// </summary>
+        internal static string Sum {
+            get {
+                return ResourceManager.GetString("Sum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 总时间 的本地化字符串。
         /// </summary>
         internal static string Time {
@@ -129,6 +192,15 @@ namespace BlackWhite.App.Properties {
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 胜率 的本地化字符串。
+        /// </summary>
+        internal static string WinPercentage {
+            get {
+                return ResourceManager.GetString("WinPercentage", resourceCulture);
             }
         }
         

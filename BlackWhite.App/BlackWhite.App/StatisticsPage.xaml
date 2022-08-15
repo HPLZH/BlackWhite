@@ -3,28 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:p="clr-namespace:BlackWhite.App.Properties"
              xmlns:c="clr-namespace:BlackWhite.App"
-             x:Class="BlackWhite.App.StatisticsPage">
+             x:Class="BlackWhite.App.StatisticsPage"
+             Title="{x:Static p:StatisticsPage.Title}">
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Label Text="{x:Static p:StatisticsPage.Normal}" FontSize="Title" HorizontalTextAlignment="Center"></Label>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-                <Label Text="{x:Static p:StatisticsPage.Clicks}" Grid.Column="0" Grid.Row="0" />
-                <Label Text="{x:Static p:StatisticsPage.Games}" Grid.Column="0" Grid.Row="1" />
-                <Label Text="{x:Static p:StatisticsPage.Wins}" Grid.Column="0" Grid.Row="2" />
-                <Label x:Name="n_c" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="0" />
-                <Label x:Name="n_g" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1" />
-                <Label x:Name="n_w" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="2" />
-            </Grid>
-            <Label HorizontalTextAlignment="Center">临时页面</Label>
-        </StackLayout>
+        <ScrollView>
+            <TableView x:Name="table">
+                <TableRoot>
+                    <TableSection Title="{x:Static p:StatisticsPage.CX_Title}">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.Padding>20,0,20,0</StackLayout.Padding>
+                                <Label Text="{x:Static p:StatisticsPage.Gamemode}" VerticalOptions="Center"></Label>
+                                <Picker x:Name="modePicker"></Picker>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout.Padding>20,0,20,0</StackLayout.Padding>
+                                <Label Text="{x:Static p:StatisticsPage.Size}" VerticalOptions="Center"></Label>
+                                <Picker x:Name="sizePicker"></Picker>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="{x:Static p:StatisticsPage.Result_Title}" x:Name="resultSection">
+                        <EntryCell x:Name="resultGames" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.Games}" IsEnabled="False"></EntryCell>
+                        <EntryCell x:Name="resultWins" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.Wins}" IsEnabled="False"></EntryCell>
+                        <EntryCell x:Name="resultWinP" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.WinPercentage}" IsEnabled="False"></EntryCell>
+                        <EntryCell x:Name="resultClicks" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.Clicks}" IsEnabled="False"></EntryCell>
+                        <EntryCell x:Name="resultClickA" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.AverageClicks}" IsEnabled="False"></EntryCell>
+                        <EntryCell x:Name="resultTime" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.Time}" IsEnabled="False"></EntryCell>
+                        <EntryCell x:Name="resultTimeA" HorizontalTextAlignment="End" Label="{x:Static p:StatisticsPage.AverageTime}" IsEnabled="False"></EntryCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -106,6 +106,15 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 你失败了 的本地化字符串。
+        /// </summary>
+        internal static string Msg_Text_Fail {
+            get {
+                return ResourceManager.GetString("Msg_Text_Fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 你成功完成了游戏 的本地化字符串。
         /// </summary>
         internal static string Msg_Text_Finished {
@@ -120,6 +129,24 @@ namespace BlackWhite.App.Properties {
         internal static string Msg_Text_NewGame {
             get {
                 return ResourceManager.GetString("Msg_Text_NewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 还剩{0}步 的本地化字符串。
+        /// </summary>
+        internal static string Msg_Text_Remaining {
+            get {
+                return ResourceManager.GetString("Msg_Text_Remaining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 游戏结束 的本地化字符串。
+        /// </summary>
+        internal static string Msg_Title_Fail {
+            get {
+                return ResourceManager.GetString("Msg_Title_Fail", resourceCulture);
             }
         }
         
@@ -147,6 +174,24 @@ namespace BlackWhite.App.Properties {
         internal static string NewGame {
             get {
                 return ResourceManager.GetString("NewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 剩余 的本地化字符串。
+        /// </summary>
+        internal static string Remaining {
+            get {
+                return ResourceManager.GetString("Remaining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 失败 的本地化字符串。
+        /// </summary>
+        internal static string State_Fail {
+            get {
+                return ResourceManager.GetString("State_Fail", resourceCulture);
             }
         }
         

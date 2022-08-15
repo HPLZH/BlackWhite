@@ -120,8 +120,20 @@
   <data name="All" xml:space="preserve">
     <value>所有</value>
   </data>
+  <data name="AverageClicks" xml:space="preserve">
+    <value>平均每场点击次数</value>
+  </data>
+  <data name="AverageTime" xml:space="preserve">
+    <value>平均用时</value>
+  </data>
   <data name="Clicks" xml:space="preserve">
     <value>点击次数</value>
+  </data>
+  <data name="CX_Title" xml:space="preserve">
+    <value>查询条件</value>
+  </data>
+  <data name="Gamemode" xml:space="preserve">
+    <value>游戏模式</value>
   </data>
   <data name="Games" xml:space="preserve">
     <value>游戏场数</value>
@@ -132,6 +144,15 @@
   <data name="Perfect" xml:space="preserve">
     <value>最优解</value>
   </data>
+  <data name="Result_Title" xml:space="preserve">
+    <value>查询结果</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>游戏尺寸</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>总计</value>
+  </data>
   <data name="Time" xml:space="preserve">
     <value>总时间</value>
   </data>
@@ -140,6 +161,9 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>统计数据</value>
+  </data>
+  <data name="WinPercentage" xml:space="preserve">
+    <value>胜率</value>
   </data>
   <data name="Wins" xml:space="preserve">
     <value>胜利场数</value>
