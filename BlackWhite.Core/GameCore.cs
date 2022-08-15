@@ -60,7 +60,7 @@ namespace BlackWhite.Core
         protected void Initialize(Blocks<T> blocks)
         {
             blocks1 = blocks;
-            blocks1.BlockClicked += (object sender, BlockClickedEventArgs e) => { Count++; BlockClicked(sender,e); Clicked(); };
+            blocks1.BlockClicked += (object sender, BlockClickedEventArgs e) => { if (State != States.Started) return; Count++; BlockClicked(sender,e); Clicked(); };
             State = States.Initialized;
         }
 
