@@ -144,6 +144,9 @@
   <data name="Msg_Text_Remaining" xml:space="preserve">
     <value>还剩{0}步</value>
   </data>
+  <data name="Msg_Text_Time" xml:space="preserve">
+    <value>用时{0}秒</value>
+  </data>
   <data name="Msg_Title_Fail" xml:space="preserve">
     <value>游戏结束</value>
   </data>
@@ -159,6 +162,9 @@
   <data name="Remaining" xml:space="preserve">
     <value>剩余</value>
   </data>
+  <data name="State_Abort" xml:space="preserve">
+    <value>已中断</value>
+  </data>
   <data name="State_Fail" xml:space="preserve">
     <value>失败</value>
   </data>
@@ -170,5 +176,8 @@
   </data>
   <data name="State_Unfinished" xml:space="preserve">
     <value>未完成</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>已用时间</value>
   </data>
 </root>

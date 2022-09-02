@@ -142,6 +142,15 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 用时{0}秒 的本地化字符串。
+        /// </summary>
+        internal static string Msg_Text_Time {
+            get {
+                return ResourceManager.GetString("Msg_Text_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 游戏结束 的本地化字符串。
         /// </summary>
         internal static string Msg_Title_Fail {
@@ -187,6 +196,15 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 已中断 的本地化字符串。
+        /// </summary>
+        internal static string State_Abort {
+            get {
+                return ResourceManager.GetString("State_Abort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 失败 的本地化字符串。
         /// </summary>
         internal static string State_Fail {
@@ -219,6 +237,15 @@ namespace BlackWhite.App.Properties {
         internal static string State_Unfinished {
             get {
                 return ResourceManager.GetString("State_Unfinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 已用时间 的本地化字符串。
+        /// </summary>
+        internal static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
             }
         }
     }

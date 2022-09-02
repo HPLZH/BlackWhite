@@ -24,7 +24,7 @@ namespace BlackWhite.App
             modes.Add(Properties.StatisticsPage.All);
             modes.Add(Properties.StatisticsPage.Normal);
             modes.Add(Properties.StatisticsPage.Perfect);
-            //modes.Add(Properties.StatisticsPage.Timed);
+            modes.Add(Properties.StatisticsPage.Timed);
 
             sizes.Add(Properties.StatisticsPage.All);
             sizes.Add("3x3");
@@ -142,7 +142,7 @@ namespace BlackWhite.App
                     {
                         resultGames.Text = Statistics.Timed.Games(size).ToString();
                         resultWins.Text = Statistics.Timed.Wins(size).ToString();
-                        resultTime.Text = Statistics.Timed.Clicks(size).ToString();
+                        resultTime.Text = TimeSpan.FromSeconds(Statistics.Timed.Time(size)).ToString("c");
                         resultWinP.Text = Statistics.Timed.Games(size) == 0 ? "N/A" : Statistics.Timed.WinPercentage(size).ToString("P");
                         resultTimeA.Text = Statistics.Timed.Games(size) == 0 ? "N/A" : TimeSpan.FromSeconds(Statistics.Timed.AverageTime(size)).ToString("c");
                     }

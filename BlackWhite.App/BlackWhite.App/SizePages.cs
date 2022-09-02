@@ -41,4 +41,23 @@ namespace BlackWhite.App
             base.StartGame(size);
         }
     }
+
+    internal class TimedSizePage : SizePage
+    {
+        public TimedSizePage()
+            : base(Properties.StartPage.Timed, Properties.StartPage.Timed_Text) { }
+
+        protected override void StartGame(int size)
+        {
+            if (size == -1)
+            {
+                Navigation.PushAsync(new TimedGamePage(new Random()));
+            }
+            else
+            {
+                Navigation.PushAsync(new TimedGamePage(size));
+            }
+            base.StartGame(size);
+        }
+    }
 }

@@ -29,7 +29,7 @@ namespace BlackWhite.App
 
 		private void Timed_ButtonClicked(object sender, EventArgs e)
 		{
-			//Navigation.PushAsync(new SizePage(Properties.StartPage.Normal, Properties.StartPage.Normal_Text));
+			Navigation.PushAsync(new TimedSizePage());
 		}
 
 		private void Free_ButtonClicked(object sender, EventArgs e)

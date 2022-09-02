@@ -153,6 +153,9 @@
     <value>Left: {0}</value>
     <comment>还剩{0}步</comment>
   </data>
+  <data name="Msg_Text_Time" xml:space="preserve">
+    <value>Time: {0}s</value>
+  </data>
   <data name="Msg_Title_Fail" xml:space="preserve">
     <value>Game Over</value>
     <comment>游戏结束</comment>
@@ -173,6 +176,9 @@
     <value>Left</value>
     <comment>剩余</comment>
   </data>
+  <data name="State_Abort" xml:space="preserve">
+    <value>Aborted</value>
+  </data>
   <data name="State_Fail" xml:space="preserve">
     <value>Game Over</value>
     <comment>失败</comment>
@@ -188,5 +194,8 @@
   <data name="State_Unfinished" xml:space="preserve">
     <value>Playing</value>
     <comment>未完成</comment>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
   </data>
 </root>
