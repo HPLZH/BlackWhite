@@ -27,7 +27,7 @@ namespace BlackWhite.App
 
         private System.Threading.Thread timer;
         private uint timeCount = 0;
-        private bool stop;
+        private StopControler stopControler = new StopControler();
 
         public TimedGamePage(int size)
             : base()
@@ -99,7 +99,7 @@ namespace BlackWhite.App
             }
             timerLabel.Text = "0";
             timeCount = 0;
-            stop = false;
+            stopControler = new StopControler() { stop = false };
             stateLabel.Text = Properties.GamePage.State_Preparing;
             Initialize(gameSize);
             core = new GameCore<GameButton>(blocks,new Random());
@@ -107,18 +107,19 @@ namespace BlackWhite.App
             core.GameEnded += Ended;
             stateLabel.Text = Properties.GamePage.State_Unfinished;
             Statistics.Timed.AddGame(gameSize);
-            timer = new System.Threading.Thread(() =>
+            timer = new System.Threading.Thread((object stopCtrl) =>
             {
+                StopControler stopControler1 = (StopControler)stopCtrl;
                 while (true)
                 {
                     Thread.Sleep(1000);
-                    if (stop) break;
+                    if (stopControler1.stop) break;
                     timeCount++;
                     Statistics.Timed.AddSecond(gameSize);
                     Dispatcher.BeginInvokeOnMainThread(() => { timerLabel.Text = timeCount.ToString(); });
                 }
             });
-            timer.Start();
+            timer.Start(stopControler);
             Show();
         }
 
@@ -129,7 +130,7 @@ namespace BlackWhite.App
 
         private void Ended(object sender,EventArgs e)
         {
-            stop= true;
+            stopControler.stop = true;
             stateLabel.Text = Properties.GamePage.State_Finished;
             Statistics.Timed.AddWin(gameSize);
             GameEndMsg();
@@ -143,10 +144,15 @@ namespace BlackWhite.App
 
         protected override void OnDisappearing()
         {
-            stop = true;
+            stopControler.stop = true;
             stateLabel.Text = Properties.GamePage.State_Abort;
             Hide();
             base.OnDisappearing();
+        }
+
+        internal class StopControler
+        {
+            public bool stop;
         }
     }
 }
