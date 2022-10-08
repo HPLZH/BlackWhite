@@ -4,16 +4,16 @@ using System.Text;
 using Xamarin.Forms;
 using BlackWhite.Core;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Base
 {
     public class GameButton : Button, IBlock<GameButton>
     {
         public GameButton()
             : base()
         {
-            this.BorderColor = Color.Gray;
-            this.BorderWidth = 2;
-            this.Clicked += (object sender, EventArgs e) => { BlockClicked(this, new BlockClickedEventArgs(X, Y)); };
+            BorderColor = Color.Gray;
+            BorderWidth = 2;
+            Clicked += (sender, e) => { BlockClicked(this, new BlockClickedEventArgs(X, Y)); };
         }
 
         public event EventHandler<BlockClickedEventArgs> BlockClicked;
@@ -25,7 +25,7 @@ namespace BlackWhite.App
             set
             {
                 _value = value;
-                this.BackgroundColor = _value ? Color.White : Color.Black;
+                BackgroundColor = _value ? Color.White : Color.Black;
             }
         }
 

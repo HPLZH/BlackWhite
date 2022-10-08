@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Select
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ButtonCardView : ContentView

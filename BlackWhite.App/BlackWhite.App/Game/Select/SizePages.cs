@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BlackWhite.App.Game.Main;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Select
 {
     internal class NormalSizePage : SizePage
     {
@@ -11,7 +12,7 @@ namespace BlackWhite.App
 
         protected override void StartGame(int size)
         {
-            if(size == -1)
+            if (size == -1)
             {
                 Navigation.PushAsync(new NormalGamePage(new Random()));
             }
@@ -26,7 +27,7 @@ namespace BlackWhite.App
     internal class PerfectSizePage : SizePage
     {
         public PerfectSizePage()
-            :base(Properties.StartPage.Perfect, Properties.StartPage.Perfect_Text) { }
+            : base(Properties.StartPage.Perfect, Properties.StartPage.Perfect_Text) { }
 
         protected override void StartGame(int size)
         {

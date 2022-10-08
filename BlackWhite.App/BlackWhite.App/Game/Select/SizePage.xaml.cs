@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BlackWhite.App.Game.Base;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Select
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SizePage : ContentPage
 	{
 		protected Button[] buttons;

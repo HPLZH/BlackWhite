@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:p="clr-namespace:BlackWhite.App.Properties"
-             xmlns:c="clr-namespace:BlackWhite.App"
-             x:Class="BlackWhite.App.StartPage"
+             xmlns:c="clr-namespace:BlackWhite.App.Game.Select"
+             x:Class="BlackWhite.App.Game.Select.StartPage"
              Title="{x:Static p:StartPage.Title}">
     <ContentPage.Content>
         <ScrollView>

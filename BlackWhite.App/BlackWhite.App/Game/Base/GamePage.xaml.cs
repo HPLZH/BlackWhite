@@ -8,10 +8,11 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using BlackWhite.Core;
+using BlackWhite.App.Game.Base;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Base
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class GamePage : ContentPage
 	{
 		protected Blocks<GameButton> blocks;

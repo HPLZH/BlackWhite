@@ -4,18 +4,18 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Base
 {
     public static class SizeCalculator
     {
         //padding=0
 
-        public static MainPage GetMainPage() => (MainPage)((NavigationPage)App.Current.MainPage).RootPage;
+        public static MainPage GetMainPage() => (MainPage)((NavigationPage)Application.Current.MainPage).RootPage;
 
         public static double GetTotal() => GetTotalSize(GetMainPage().WindowSize.width, GetMainPage().WindowSize.height);
         public static int GetMax() => GetMaxSize(GetTotal());
         public static double GetBlock(int size) => GetBlockSize(GetTotal(), size);
-        
+
         public static double GetBlockSizeM(double total, int size)
         {
             double result = GetBlockSize(total, size);

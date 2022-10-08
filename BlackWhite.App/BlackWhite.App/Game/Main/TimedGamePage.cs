@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Threading;
+using BlackWhite.App.Game.Base;
 using BlackWhite.Core;
 
 using Xamarin.Forms;
 
-namespace BlackWhite.App
+namespace BlackWhite.App.Game.Main
 {
-    internal class PerfectGamePage : GamePage
+    internal class TimedGamePage : GamePage
     {
-        private PerfectCore<GameButton> core;
+        private GameCore<GameButton> core;
 
         private int gameSize;
         private bool randomMode;
@@ -18,17 +19,18 @@ namespace BlackWhite.App
 
         private StackLayout infoStack = new StackLayout() { IsVisible = true };
         private StackLayout stateStack = new StackLayout() { HorizontalOptions = LayoutOptions.CenterAndExpand, Orientation = StackOrientation.Vertical };
-        private StackLayout countStack = new StackLayout() { HorizontalOptions = LayoutOptions.CenterAndExpand, Orientation = StackOrientation.Vertical };
-        private StackLayout remainStack = new StackLayout() { HorizontalOptions = LayoutOptions.CenterAndExpand, Orientation = StackOrientation.Vertical };
+        private StackLayout timeStack = new StackLayout() { HorizontalOptions = LayoutOptions.CenterAndExpand, Orientation = StackOrientation.Vertical };
 
         private Label stateLabel = new Label() { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
         private Button newGameButton = new Button() { Text = Properties.GamePage.NewGame };
-        private Label countLabel = new Label() { Text = Properties.GamePage.Count, TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
-        private Label counter = new Label() { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
-        private Label remainLabel = new Label() { Text = Properties.GamePage.Remaining, TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
-        private Label remainCounter = new Label() { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
+        private Label timeLabel = new Label() { Text = Properties.GamePage.Time, TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
+        private Label timerLabel = new Label() { TextColor = Color.White, FontSize = 20, HorizontalTextAlignment = TextAlignment.Center };
 
-        public PerfectGamePage(int size)
+        private Thread timer;
+        private uint timeCount = 0;
+        private StopControler stopControler = new StopControler();
+
+        public TimedGamePage(int size)
             : base()
         {
             randomMode = false;
@@ -37,7 +39,7 @@ namespace BlackWhite.App
             NewGame();
         }
 
-        public PerfectGamePage(Random random)
+        public TimedGamePage(Random random)
             : base()
         {
             randomMode = true;
@@ -50,18 +52,15 @@ namespace BlackWhite.App
         {
             InfoContent = infoStack;
             infoStack.Children.Add(stateStack);
-            infoStack.Children.Add(countStack);
-            infoStack.Children.Add(remainStack);
+            infoStack.Children.Add(timeStack);
             stateStack.Children.Add(stateLabel);
             stateStack.Children.Add(newGameButton);
-            countStack.Children.Add(countLabel);
-            countStack.Children.Add(counter);
-            remainStack.Children.Add(remainLabel);
-            remainStack.Children.Add(remainCounter);
+            timeStack.Children.Add(timeLabel);
+            timeStack.Children.Add(timerLabel);
             newGameButton.Clicked += NewGameClicked;
         }
 
-        private async void NewGameClicked(object sender,EventArgs e)
+        private async void NewGameClicked(object sender, EventArgs e)
         {
             bool result = await DisplayAlert(Properties.GamePage.Msg_Title_NewGame,
                 Properties.GamePage.Msg_Text_NewGame,
@@ -75,18 +74,7 @@ namespace BlackWhite.App
             bool result = await DisplayAlert(Properties.GamePage.Msg_Title_Finished,
                 Properties.StringTools.MultiLine(
                     Properties.GamePage.Msg_Text_Finished,
-                    Properties.StringTools.Replace(Properties.GamePage.Msg_Text_Count,core.Count.ToString()),
-                    Properties.StringTools.Replace(Properties.GamePage.Msg_Text_Remaining,core.Remaining.ToString())),
-                Properties.GamePage.Msg_Button_NewGame,
-                Properties.GamePage.Msg_Button_OK);
-            if (result) NewGame();
-        }
-
-        private async void GameStopMsg(object sender, EventArgs e)
-        {
-            stateLabel.Text = Properties.GamePage.State_Fail;
-            bool result = await DisplayAlert(Properties.GamePage.Msg_Title_Fail,
-                Properties.GamePage.Msg_Text_Fail,
+                    string.Format(Properties.GamePage.Msg_Text_Time, timeCount.ToString())),
                 Properties.GamePage.Msg_Button_NewGame,
                 Properties.GamePage.Msg_Button_OK);
             if (result) NewGame();
@@ -99,37 +87,53 @@ namespace BlackWhite.App
                 core.Close();
                 core = null;
             }
+            if (timer != null)
+            {
+                timer = null;
+            }
             if (randomMode)
             {
-                MainPage mainPage = (MainPage)((NavigationPage)App.Current.MainPage).RootPage;
+                MainPage mainPage = (MainPage)((NavigationPage)Application.Current.MainPage).RootPage;
                 int maxSize = SizeCalculator.GetMaxSize(SizeCalculator.GetTotalSize(mainPage.WindowSize.width, mainPage.WindowSize.height));
                 if (maxSize > 9) maxSize = 9;
                 gameSize = random1.Next(3, 1 + maxSize);
             }
-            counter.Text = "0";
+            timerLabel.Text = "0";
+            timeCount = 0;
+            stopControler = new StopControler() { stop = false };
             stateLabel.Text = Properties.GamePage.State_Preparing;
             Initialize(gameSize);
-            core = new PerfectCore<GameButton>(blocks,new Random());
+            core = new GameCore<GameButton>(blocks, new Random());
             core.BlockClicked += BlockClicked;
             core.GameEnded += Ended;
-            core.GameStopped += GameStopMsg;
             stateLabel.Text = Properties.GamePage.State_Unfinished;
-            remainCounter.Text = core.Remaining.ToString();
-            Statistics.Perfect.AddGame(gameSize);
+            Statistics.Timed.AddGame(gameSize);
+            timer = new Thread((stopCtrl) =>
+            {
+                StopControler stopControler1 = (StopControler)stopCtrl;
+                while (true)
+                {
+                    Thread.Sleep(1000);
+                    if (stopControler1.stop) break;
+                    timeCount++;
+                    Statistics.Timed.AddSecond(gameSize);
+                    Dispatcher.BeginInvokeOnMainThread(() => { timerLabel.Text = timeCount.ToString(); });
+                }
+            });
+            timer.Start(stopControler);
             Show();
         }
 
-        private void BlockClicked(object sender,EventArgs e)
+        private void BlockClicked(object sender, EventArgs e)
         {
-            counter.Text = core.Count.ToString();
-            remainCounter.Text = core.Remaining.ToString();
-            Statistics.Perfect.AddClick(gameSize);
+            Statistics.Timed.AddClick(gameSize);
         }
 
-        private void Ended(object sender,EventArgs e)
+        private void Ended(object sender, EventArgs e)
         {
+            stopControler.stop = true;
             stateLabel.Text = Properties.GamePage.State_Finished;
-            Statistics.Perfect.AddWin(gameSize);
+            Statistics.Timed.AddWin(gameSize);
             GameEndMsg();
         }
 
@@ -137,6 +141,19 @@ namespace BlackWhite.App
         {
             infoStack.Orientation = width < height ? StackOrientation.Horizontal : StackOrientation.Vertical;
             base.OnSizeAllocated(width, height);
+        }
+
+        protected override void OnDisappearing()
+        {
+            stopControler.stop = true;
+            stateLabel.Text = Properties.GamePage.State_Abort;
+            Hide();
+            base.OnDisappearing();
+        }
+
+        internal class StopControler
+        {
+            public bool stop;
         }
     }
 }
