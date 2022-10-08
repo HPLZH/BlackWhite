@@ -133,6 +133,24 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 游戏尺寸 的本地化字符串。
+        /// </summary>
+        internal static string Size_Label {
+            get {
+                return ResourceManager.GetString("Size_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开始 的本地化字符串。
+        /// </summary>
+        internal static string Start_Button {
+            get {
+                return ResourceManager.GetString("Start_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 计时模式 的本地化字符串。
         /// </summary>
         internal static string Timed {

@@ -22,7 +22,12 @@ namespace BlackWhite.Core
             Change
         }
 
-        public ClickModes ClickMode { get; set; }
+        private ClickModes clickMode = ClickModes.Normal;
+        public ClickModes ClickMode
+        {
+            get { return clickMode; }
+            set { clickMode = value; blocks1.DefaultChange = value == ClickModes.Change; }
+        }
 
         public FreeCore(Blocks<T> blocks)
         {
@@ -69,5 +74,9 @@ namespace BlackWhite.Core
         {
             blocks1.GameRandomize(random);
         }
+
+        public void Clear(bool value = true) => blocks1.Clear(value);
+
+        public void Invert() => blocks1.Invert();
     }
 }

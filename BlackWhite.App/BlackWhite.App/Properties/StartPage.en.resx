@@ -149,6 +149,12 @@
     <value>Random</value>
     <comment>随机</comment>
   </data>
+  <data name="Size_Label" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Start_Button" xml:space="preserve">
+    <value>开始</value>
+  </data>
   <data name="Timed" xml:space="preserve">
     <value>Timed</value>
     <comment>计时模式</comment>

@@ -53,6 +53,7 @@ namespace BlackWhite.Core
         public GameCore(Blocks<T> blocks, Random random)
         {
             Initialize(blocks);
+            if (this is FreeCore<T>) return;
             Randomize(random);
             Start();
         }

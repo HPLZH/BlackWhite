@@ -61,11 +61,83 @@ namespace BlackWhite.App.Properties {
         }
         
         /// <summary>
+        ///   查找类似 标准点击 的本地化字符串。
+        /// </summary>
+        internal static string Click {
+            get {
+                return ResourceManager.GetString("Click", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 已使用 的本地化字符串。
         /// </summary>
         internal static string Count {
             get {
                 return ResourceManager.GetString("Count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 生成工具 的本地化字符串。
+        /// </summary>
+        internal static string Generate {
+            get {
+                return ResourceManager.GetString("Generate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 全黑 的本地化字符串。
+        /// </summary>
+        internal static string Generate_Black {
+            get {
+                return ResourceManager.GetString("Generate_Black", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 完全随机生成 的本地化字符串。
+        /// </summary>
+        internal static string Generate_FullRandomize {
+            get {
+                return ResourceManager.GetString("Generate_FullRandomize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 标准生成 的本地化字符串。
+        /// </summary>
+        internal static string Generate_GameRandomize {
+            get {
+                return ResourceManager.GetString("Generate_GameRandomize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 反转 的本地化字符串。
+        /// </summary>
+        internal static string Generate_Invert {
+            get {
+                return ResourceManager.GetString("Generate_Invert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 打乱 的本地化字符串。
+        /// </summary>
+        internal static string Generate_MixRandomize {
+            get {
+                return ResourceManager.GetString("Generate_MixRandomize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 全白 的本地化字符串。
+        /// </summary>
+        internal static string Generate_White {
+            get {
+                return ResourceManager.GetString("Generate_White", resourceCulture);
             }
         }
         
@@ -192,6 +264,15 @@ namespace BlackWhite.App.Properties {
         internal static string Remaining {
             get {
                 return ResourceManager.GetString("Remaining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 单个方块 的本地化字符串。
+        /// </summary>
+        internal static string Single {
+            get {
+                return ResourceManager.GetString("Single", resourceCulture);
             }
         }
         

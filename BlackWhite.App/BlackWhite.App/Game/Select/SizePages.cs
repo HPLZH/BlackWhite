@@ -61,4 +61,16 @@ namespace BlackWhite.App.Game.Select
             base.StartGame(size);
         }
     }
+
+    internal class FreeSizePage : NumberSizePage
+    {
+        public FreeSizePage()
+            : base(Properties.StartPage.Free, Properties.StartPage.Free_Text) { }
+
+        protected override void StartGame(int size)
+        {
+            Navigation.PushAsync(new FreeGamePage(size));
+            base.StartGame(size);
+        }
+    }
 }

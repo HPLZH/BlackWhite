@@ -112,7 +112,7 @@ namespace BlackWhite.Core
             return IsSame(blocks[0, 0].Value);
         }
 
-        public void Clear(bool value = false)
+        public void Clear(bool value = true)
         {
             foreach (IBlock<T> block in blocks)
             {
@@ -150,6 +150,11 @@ namespace BlackWhite.Core
             {
                 GameRandomize(random);
             }
+        }
+
+        public void Invert()
+        {
+            foreach (IBlock<T> block in blocks) block.Value = !block.Value;
         }
 
         public IEnumerator<T> GetEnumerator()

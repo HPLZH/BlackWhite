@@ -11,7 +11,7 @@
                 <c:ButtonCardView ButtonText="{x:Static p:StartPage.Next}" Title="{x:Static p:StartPage.Normal}" Text="{x:Static p:StartPage.Normal_Text}" ButtonClicked="Normal_ButtonClicked"></c:ButtonCardView>
                 <c:ButtonCardView ButtonText="{x:Static p:StartPage.Next}" Title="{x:Static p:StartPage.Perfect}" Text="{x:Static p:StartPage.Perfect_Text}" ButtonClicked="Perfect_ButtonClicked"></c:ButtonCardView>
                 <c:ButtonCardView ButtonText="{x:Static p:StartPage.Next}" Title="{x:Static p:StartPage.Timed}" Text="{x:Static p:StartPage.Timed_Text}" ButtonClicked="Timed_ButtonClicked"></c:ButtonCardView>
-                <c:ButtonCardView IsVisible="False" ButtonText="{x:Static p:StartPage.Next}" Title="{x:Static p:StartPage.Free}" Text="{x:Static p:StartPage.Free_Text}" ButtonClicked="Free_ButtonClicked"></c:ButtonCardView>
+                <c:ButtonCardView ButtonText="{x:Static p:StartPage.Next}" Title="{x:Static p:StartPage.Free}" Text="{x:Static p:StartPage.Free_Text}" ButtonClicked="Free_ButtonClicked"></c:ButtonCardView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

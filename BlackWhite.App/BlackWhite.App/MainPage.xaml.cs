@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using Xamarin.Forms;
+using BlackWhite.App.Game.Select;
 
 namespace BlackWhite.App
 {

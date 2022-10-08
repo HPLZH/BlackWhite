@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Click" xml:space="preserve">
+    <value>标准点击</value>
+  </data>
   <data name="Count" xml:space="preserve">
     <value>已使用</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>生成工具</value>
+  </data>
+  <data name="Generate_Black" xml:space="preserve">
+    <value>全黑</value>
+  </data>
+  <data name="Generate_FullRandomize" xml:space="preserve">
+    <value>完全随机生成</value>
+  </data>
+  <data name="Generate_GameRandomize" xml:space="preserve">
+    <value>标准生成</value>
+  </data>
+  <data name="Generate_Invert" xml:space="preserve">
+    <value>反转</value>
+  </data>
+  <data name="Generate_MixRandomize" xml:space="preserve">
+    <value>打乱</value>
+  </data>
+  <data name="Generate_White" xml:space="preserve">
+    <value>全白</value>
   </data>
   <data name="Msg_Button_Cancel" xml:space="preserve">
     <value>取消</value>
@@ -161,6 +185,9 @@
   </data>
   <data name="Remaining" xml:space="preserve">
     <value>剩余</value>
+  </data>
+  <data name="Single" xml:space="preserve">
+    <value>单个方块</value>
   </data>
   <data name="State_Abort" xml:space="preserve">
     <value>已中断</value>

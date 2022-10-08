@@ -34,7 +34,7 @@ namespace BlackWhite.App.Game.Select
 
 		private void Free_ButtonClicked(object sender, EventArgs e)
 		{
-
+			Navigation.PushAsync(new FreeSizePage());
 		}
 
     }
