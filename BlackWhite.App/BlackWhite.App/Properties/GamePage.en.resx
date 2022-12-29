@@ -118,32 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Click" xml:space="preserve">
-    <value>标准点击</value>
+    <value>Click</value>
+    <comment>标准点击</comment>
   </data>
   <data name="Count" xml:space="preserve">
     <value>Used</value>
     <comment>已使用</comment>
   </data>
   <data name="Generate" xml:space="preserve">
-    <value>生成工具</value>
+    <value>Tools</value>
+    <comment>生成工具</comment>
   </data>
   <data name="Generate_Black" xml:space="preserve">
-    <value>全黑</value>
+    <value>Black</value>
+    <comment>全黑</comment>
   </data>
   <data name="Generate_FullRandomize" xml:space="preserve">
-    <value>完全随机生成</value>
+    <value>Random Generate</value>
+    <comment>完全随机生成</comment>
   </data>
   <data name="Generate_GameRandomize" xml:space="preserve">
-    <value>标准生成</value>
+    <value>Standard Generate</value>
+    <comment>标准生成</comment>
   </data>
   <data name="Generate_Invert" xml:space="preserve">
-    <value>反转</value>
+    <value>Invert</value>
+    <comment>反转</comment>
   </data>
   <data name="Generate_MixRandomize" xml:space="preserve">
-    <value>打乱</value>
+    <value>Random Click</value>
+    <comment>打乱</comment>
   </data>
   <data name="Generate_White" xml:space="preserve">
-    <value>全白</value>
+    <value>White</value>
+    <comment>全白</comment>
   </data>
   <data name="Msg_Button_Cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -201,7 +209,8 @@
     <comment>剩余</comment>
   </data>
   <data name="Single" xml:space="preserve">
-    <value>单个方块</value>
+    <value>Change</value>
+    <comment>单个方块</comment>
   </data>
   <data name="State_Abort" xml:space="preserve">
     <value>Aborted</value>
